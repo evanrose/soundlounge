@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+# BEGIN WordPress
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+
+# Include in the next line all folders to exclude
+RewriteCond %{REQUEST_URI}  !(folder1|folder2|folder3) [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+# END WordPress
+</IfModule>
+
