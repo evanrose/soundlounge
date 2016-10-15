@@ -9,6 +9,6 @@ add_filter('upload_dir', 'remote_media_upload_dir');
 
 function remote_media_upload_dir( $upload ) {
 
-	$upload['baseurl'] = 'https://wpaetna.build.webershandwick.com/wp-content/uploads';
+	$upload['baseurl'] = 'http://soundlounge.com.s14910.gridserver.com/wp-content/uploads';
 	return $upload;
 }
