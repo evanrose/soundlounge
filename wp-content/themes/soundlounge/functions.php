@@ -2,16 +2,19 @@
 
 register_nav_menus();
 add_theme_support( 'post-thumbnails' ); 
+show_admin_bar( 0 );
 
 /**
 @ Enqueue Scripts and Styles
 */
 function sl_enqueue_scripts() {
 	
-	wp_enqueue_style( 'css', get_template_directory_uri() . '/css/main.css' );
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js', 0, 0, 0 );
-	wp_enqueue_script( 'js', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', 0, 0, 0 );
-	wp_enqueue_script( 'js', get_template_directory_uri() . '/js/scripts.js', 0, 0, true );
+	wp_enqueue_style( 'css', get_template_directory_uri() . '/stylesheets/app.css' );
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', 0, 0, 0 );
+	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js', 0, 0, 1 );
+    
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', 0, 0, 1 );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', 0, 0, 1 );
 
 }
 add_action( 'wp_enqueue_scripts', 'sl_enqueue_scripts' );
@@ -41,3 +44,7 @@ function sl_nav_class ($classes, $item) {
     return $classes;
 }
 add_filter('nav_menu_css_class' , 'sl_nav_class' , 10 , 2);
+
+/**
+@ Add widget area for dropdown
+*/
