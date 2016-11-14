@@ -14,7 +14,7 @@ if ( $post_type )
 
 <section class="">
 
-	<?php get_template_part( 'temp', 'title' ); ?>
+	<?php get_template_part( 'tpl', 'title' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); 
 

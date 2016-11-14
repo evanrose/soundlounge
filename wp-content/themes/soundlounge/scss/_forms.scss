@@ -1,0 +1,42 @@
+.select-style {
+    
+    background: $gray url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
+    overflow: hidden;
+    height: 40px;        
+}
+
+.select-style select {
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    padding: 0 0 0 35%;
+    font-size: 14px;
+
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+label {
+
+    font-size: rem-calc(12);
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+
+    width: 100%;
+}
+
+input[type="submit"] {
+
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    //@media (min-width: 480px) { width: 26px; }
+}

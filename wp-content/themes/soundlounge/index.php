@@ -2,7 +2,7 @@
 
 <section class="">
 
-	<?php get_template_part( 'temp', 'title' ); ?>
+	<?php get_template_part( 'tpl', 'title' ); ?>
 
 	<?php //the_content(); ?>
 	

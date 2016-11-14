@@ -1,0 +1,201 @@
+// could be mixin
+
+main {
+
+	@include border-bottom;
+
+	border-bottom: 2px solid $green;
+	padding-top: 40px;
+	position: relative;
+
+	section {
+
+		margin-bottom: 40px;
+	}
+}
+
+.button {
+
+	text-transform: uppercase;
+}
+
+.row-full {
+
+	width: 100%;
+	@media (min-width: 769px) { width: auto; }
+}
+
+.people-page {
+
+	//display: none;
+
+	.person-container {
+
+		margin-bottom: 20px;
+	}
+
+	h3 {
+
+		margin: 20px 0 5px;
+		line-height: 1.5;
+	}
+
+	h4 {
+
+		line-height: 1.75;
+	}
+}
+
+.person-page {
+
+	.column, h2, h5, p {
+
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 1024px) { 
+
+		h2 {
+
+			margin-top: 40px;
+		}
+	}
+
+}
+
+.project-page {
+
+	.project-meta {
+
+		margin-top: 20px;
+
+		h3, h5 {
+
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.projects-page {
+
+	.row-projects {
+
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	.row-projects > div {
+
+		position: relative;
+		padding: 5px !important;
+
+		img {
+			
+			z-index: -1;
+		}
+
+		.project-meta {
+
+			h3, p {
+
+				color: #fff;
+			}
+			
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate( 20px, -25%);
+		}
+	}
+}
+
+//CONTACT
+
+.contact-email a {
+
+	color: black;
+	font-size: rem-calc(12);
+}
+
+.contact-page h3 {
+
+	margin-bottom: 10px;
+}
+
+.contact-social {
+
+	height: 40px;
+	overflow: hidden;
+
+	span {
+
+		float: left;
+	}
+}
+
+.principals-row {
+
+	margin-top: 20px;
+
+	& > div {
+
+		padding-bottom: 20px;
+	}
+
+	span {
+
+		display: block;
+	}
+}
+
+.form-row {
+
+	> div {
+			
+		margin-top: 20px;
+		background-color: $gray;
+	}
+
+	.fields-row {
+
+		padding-bottom: 20px;
+		padding-top: 20px;
+
+		h3 {
+
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.map-row {
+
+	//height: 250px;
+
+	.iframe-container {
+
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 56.25%;
+	}
+
+	#map {
+	
+		border: none;
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-height: 300px;
+	}
+
+}
+
+// To fix chrome tab outtine
+dd > a.active{
+
+	border: none;
+}

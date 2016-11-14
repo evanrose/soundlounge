@@ -2,9 +2,13 @@
 
 <section class="">
 
-	<?php get_template_part( 'temp', 'title' ); ?>
+	<?php get_template_part( 'tpl', 'title' ); ?>
 
-	<?php //the_content(); ?>
+	<div class="row">
+		<div class="small-12 column">
+			<?php the_field( 'page_content' ); ?>
+		</div>
+	</div>
 	
 </section>
 

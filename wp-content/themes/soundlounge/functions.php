@@ -38,7 +38,14 @@ function sl_nav_menu() {
 @ Filter "active" to current nav item
 */
 function sl_nav_class ($classes, $item) {
-    if (in_array('current-menu-item', $classes) ){
+
+	if ( is_singular( 'project' ) && 'Work' == $item->title ) {
+		$classes[] = 'current-menu-item';
+	}
+	if ( is_singular( 'person' ) && 'People' == $item->title ) {
+		$classes[] = 'current-menu-item';
+	}
+    if ( in_array( 'current-menu-item', $classes ) ){
         $classes[] = 'active ';
     }
     return $classes;
@@ -47,4 +54,24 @@ add_filter('nav_menu_css_class' , 'sl_nav_class' , 10 , 2);
 
 /**
 @ Add widget area for dropdown
+*/
+
+function sl_menu_item_classes( $classes, $item, $args ) {
+	if( 'header' !== $args->theme_location )
+		return $classes;
+	if( ( is_singular( 'post' ) || is_category() || is_tag() ) && 'Blog' == $item->title )
+		$classes[] = 'current-menu-item';
+		
+	if( ( is_singular( 'code' ) || is_tax( 'code-tag' ) ) && 'Code' == $item->title )
+		$classes[] = 'current-menu-item';
+		
+	if( is_singular( 'projects' ) && 'Case Studies' == $item->title )
+		$classes[] = 'current-menu-item';
+		
+	return array_unique( $classes );
+}
+add_filter( 'nav_menu_css_class', 'sl_menu_item_classes', 10, 3 );
+
+/**
+@
 */

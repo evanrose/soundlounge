@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <?php 
-	$roles = wp_get_post_terms( $post->ID, 'role');
-	$roles = wp_list_pluck( $positions, 'name' );
+	$positions = wp_get_post_terms( $post->ID, 'position');
+	$positions = wp_list_pluck( $positions, 'name' );
  ?>
 
 <section class="person-page">
@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="small-12 column">
 					<h2><?php the_title(); ?></h2>
-					<h5><?php echo implode(' &#149; ', $positions); ?></h5>
+					<h4><?php echo implode(' &#149; ', $positions); ?></h4>
 					<p><?php the_field( 'bio' ) ?></p>
 				</div>
 				<div class="column">
@@ -40,7 +40,7 @@
 					
 					<?php if ( get_field( 'email_address' ) ) { ?>
 						<div class="email-icon-container">
-							<a href="mailto:<?php the_field( 'email_address') ?>"><span class="icon-container"><span class="icon social-icon email-icon email-icon-40"></span></span><span class="text text-40">Scheduling</span></a>
+							<a class="email-address" href="mailto:<?php the_field( 'email_address') ?>"><span class="icon-container"><span class="icon social-icon email-icon email-icon-40"></span></span><span class="text text-40">For Scheduling</span></a>
 						</div>
 					<?php } ?>
 

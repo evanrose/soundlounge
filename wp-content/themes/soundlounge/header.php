@@ -8,7 +8,7 @@
 <?php wp_head(); ?>
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/bower_components/modernizr/modernizr.js"></script>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <!-- nav -->
 

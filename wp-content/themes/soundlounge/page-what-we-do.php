@@ -2,13 +2,13 @@
 
 <section class="what-we-do">
 	
-	<?php get_template_part( 'temp', 'title' ); ?>
+	<?php get_template_part( 'tpl', 'title' ); ?>
 
 <div class="row small-12 wwd-tabs">
 	<div class="columns">
 		<form class="select-style show-for-small-only">
 	        <select>
-	        	<option value="service1"><?php echo the_field( '_tab_1_title'); ?></option>
+	        	<option value="service1">Service 2</option>
 		        <option value="service2">Service 2</option>
 		        <option value="service3">Service 3</option>
 		        <option value="service4">Service 4</option>
@@ -40,16 +40,15 @@
 				while( $i <= 5 ) {
 					$tab_index = $i-1;
 
-					$field_name = 'tab_' . $i . '_title';
-					get_field( $field_name );
+					$tab_title_field = 'tab_' . $i . '_title';
+					$tab_title = get_field( $tab_title_field );
 
 					?>
 
-					<section role="tabpanel" aria-hidden="false" class="content <?php if ( $i == 1 ) echo 'active'; ?>" id="panel2-<?php echo $i; ?>">
+					<section role="tabpanel" aria-hidden="false" class="content <?php echo $tab_title_field; ?> <?php if ( $i == 1 ) echo 'active'; ?>" id="panel2-<?php echo $i; ?>">
 						<div class="row columns">
 							<div class="small-8 column end">
-								<?php $tab_title = 'tab_' . $i . '_title'; ?>
-								<h2><?php the_field( $tab_title ); ?></h2>
+								<h2 class=""><?php echo $tab_title; ?></h2>
 						</div>
 						<div class="row columns">
 							<div class="small-8 medium-6 column">
@@ -97,16 +96,16 @@
 					              timer:false;
 						          slide_number:false;">
 					<li>
-						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=our%20space&amp;w=1280&amp;h=720" />
+						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;w=1280&amp;h=720" />
 					</li>
 					<li>
-						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=our%20space&amp;w=1280&amp;h=720" />
+						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;w=1280&amp;h=720" />
 					</li>
 					<li>
-						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=our%20space&amp;w=1280&amp;h=720" />
+						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;w=1280&amp;h=720" />
 					</li>
 					<li>
-						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=our%20space&amp;w=1280&amp;h=720" />
+						<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;w=1280&amp;h=720" />
 					</li>
 				</ul>
 			</div>

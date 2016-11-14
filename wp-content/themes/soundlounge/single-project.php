@@ -7,7 +7,11 @@
  ?>
 
 <section class="project-page">
-
+	<div class="row">
+		<div class="small-12 column text-right">
+			<a href="/people/"><span class="icon-container icon-container-20"><span class="icon close-icon"></span></span></a>
+		</div>
+	</div>
 	<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 		<div class="modal-wrapper row small-12 large-10">
 			<div class="video-wrapper">

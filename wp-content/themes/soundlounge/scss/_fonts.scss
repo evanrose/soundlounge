@@ -1,0 +1,58 @@
+//Fonts
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url( '../fonts/Montserrat-Bold.otf	');
+}
+
+@font-face {
+    font-family: Raleway-Black;
+    src: url( '../fonts/Raleway-Black.ttf');
+}
+
+@font-face {
+    font-family: Raleway-BlackItalic;
+    src: url( '../fonts/Raleway-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url( '../fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url( '../fonts/Raleway-Medium.ttf');
+}
+
+h1, h6 {
+
+	font-family: Raleway-BlackItalic, sans-serif;
+	letter-spacing: 0.56em;
+	
+}
+
+h2 {
+
+	font-family: Montserrat-Bold, sans-serif;
+	letter-spacing: 0.14em;
+}
+
+h3 {
+
+	font-family: Raleway-Black, sans-serif;
+	letter-spacing: 0.56em;
+}
+
+h4 {
+
+	font-family: Raleway-Bold, sans-serif;
+	letter-spacing: 0.56em;
+}
+
+h5, .button {
+
+	font-family: Raleway-Medium, sans-serif;
+	letter-spacing: 0.56em;
+	line-height: 1.5;
+}
