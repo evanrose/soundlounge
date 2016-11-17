@@ -1,1 +1,1 @@
-sass --watch scss:stylesheets
+bundle exec compass watch

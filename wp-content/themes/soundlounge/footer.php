@@ -12,21 +12,21 @@
 	            	<h6>Contact</h6>
 	            	<p><a class="telephone-link" href="tel:1-212-388-1212">212.388.1212</a></p>
 	            	<div class="email-icon-container">
-						<a class="email-address" href="mailto:@soundlounge.com"><span class="icon-container"><span class="icon social-icon email-icon"></span></span><span class="text">Careers</span></a>
+						<a class="email-address" href="mailto:<?php echo antispambot( 'careers@soundlounge.com' ); ?>"><span class="icon-container"><span class="icon social-icon email-icon"></span></span><span class="text">Careers</span></a>
 					</div>
 	            	<div class="email-icon-container">
-						<a class="email-address" href="mailto:@soundlounge.com">
+						<a class="email-address" href="mailto:<?php echo antispambot( 'producers@soundlounge.com' ); ?>">
 							<span class="icon-container"><span class="icon social-icon email-icon"></span></span><span class="text">Scheduling</span></a>
 					</div>
 	            </li>
 	            <li>
 	            	<h6>Services</h6>
 	            	<p>
-	            		Commercial + Radio<br>
-	            		Casting<br>
-	            		Film + Television + ADR<br>
-	            		Sound Design<br>
-	            		Remote Services
+	            		<a href="/what-we-do/#Commercials">Commercial + Radio</a><br>
+	            		<a href="/what-we-do/#Casting">Casting</a><br>
+	            		<a href="/what-we-do/#Film">Film + Television + ADR</a><br>
+	            		<a href="/what-we-do/#Sound">Sound Design</a><br>
+	            		<a href="/what-we-do/#Remote">Remote Services</a>
 	            	</p>
 	            </li>
 	            <li>

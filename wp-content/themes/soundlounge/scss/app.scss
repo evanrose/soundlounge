@@ -14,6 +14,7 @@
 	@import "wwd";
 @import "footer";
 @import "home";
+	@import "sidecar";
 
 @import "styleguide";
 
@@ -43,10 +44,4 @@ h1, h2, h3, h4, h5, h6 {
 
 		margin-bottom: 0;
 	}
-}
-
-.email-address {
-
-	unicode-bidi:bidi-override;
-	direction: rtl;
 }

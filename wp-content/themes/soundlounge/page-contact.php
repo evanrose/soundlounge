@@ -33,6 +33,10 @@
 		</div>
 	</div>
 
+	<div class="row">
+
+	</div>
+
 	<div class="row form-row">
 		<div class="small-12 medium-10 large-8 medium-centered column">
 
@@ -43,8 +47,20 @@
 					<div class="small-12 column">
 						<h3 class="text-center">Join our newsletter:</h3>
 					</div>
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+ hbspt.forms.create({ 
+   css: '',
+   portalId: '38071',
+   formId: '4a8c454e-32ea-4c1c-90e5-fd574ee78e80'
+ });
+</script>					
 					
-					<div class="small-12 medium-6 column">
+					<!-- <div class="small-12 medium-6 column">
 						<label>First Name
 	        			<input type="text" placeholder="">
 	      				</label>
@@ -63,16 +79,18 @@
 					<div class="small-12 show-for-small-only column">
 						<input type="submit" class="button" value="Get updates!">
 					</div>
-					<div class="hide-for-small medium-6 column medium-centered">
+					<div class="hide-for-small medium-8 column medium-centered">
 						<input type="submit" class="button" value="Get updates from us!">
 					</div>
+
+					-->
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row map-row">
-		<div classs="small-12 column">
-			<img src="/wp-content/themes/soundlounge/images/map.png" alt="Map of 149 5th Ave., New York, NY 10010">
+	<div class="row column" style="float: none;">
+		<div class="small-12  google-maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9866679609718!2d-73.99241818459426!3d40.74031887932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3ebd851ab%3A0xa16401c174b5cecb!2sSound+Lounge!5e0!3m2!1sen!2sus!4v1479156605483" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</div>
 	

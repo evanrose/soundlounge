@@ -1,8 +1,8 @@
 .what-we-do {
 
-	h2 {
+	.tabs-content h2, .about-slider h2 {
 
-		//padding: 20px 0 40px;
+		padding: 20px 0 40px;
 	}
 
 	section > .row {
@@ -29,10 +29,11 @@
 		
 			& > a {
 
+				color: black;
 				font-family: Raleway-Medium,sans-serif;
 				font-size: 1em;
 				letter-spacing: 0.56em;
-				padding: 2rem;
+				padding: 30px 0 30px 0;
 
 				&:hover {
 
@@ -40,10 +41,32 @@
 					font-style: italic;
 				}
 			}
-			text-align: center;
+			//text-align: center;
 			text-transform: uppercase;
 			width: 33%;	
-			@media (min-width: 1024px) { width: 20%; }
+			@media (min-width: 1024px) { 
+				
+				&.tab-1 {
+
+					width: 21%;
+				}
+				&.tab-2 {
+
+					width: 16%; 
+				}
+				&.tab-3 {
+
+					width: 29%;
+				}
+				&.tab-4 {
+
+					width: 23%;
+				}
+				&.tab-5 {
+
+					width: 0%;
+				}
+			}
 		}
 
 		.tabs-content .wrapper {
@@ -79,11 +102,11 @@
 	}
 	.tab_2_title {
 
-		border-bottom: 1px solid $blue;
+		border-bottom: 1px solid $purple;
 
 		h2 {
 
-			color: $blue;
+			color: $purple;
 		}
 	}
 	.tab_3_title {
@@ -97,11 +120,11 @@
 	}
 	.tab_4_title {
 
-		border-bottom: 1px solid $green;
+		border-bottom: 1px solid $blue;
 
 		h2 {
 
-			color: $green;
+			color: $blue;
 		}
 	}
 	.tab_5_title {

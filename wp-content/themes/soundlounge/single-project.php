@@ -9,7 +9,7 @@
 <section class="project-page">
 	<div class="row">
 		<div class="small-12 column text-right">
-			<a href="/people/"><span class="icon-container icon-container-20"><span class="icon close-icon"></span></span></a>
+			<a href="/work/"><span class="icon-container icon-container-20"><span class="icon close-icon"></span></span></a>
 		</div>
 	</div>
 	<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -40,7 +40,7 @@
 			<h3><?php the_title(); ?></h3>
 			<h5><?php echo implode(' &#149; ', $roles); ?></h5>
 			<?php if ( get_field( 'awards' ) ) { ?>
-				<p><?php the_field( 'awards' ); ?></p>
+				<h4><?php the_field( 'awards' ); ?></h4>
 			<?php } ?>
 		</div>
 		<div class="small-12 medium-6 column project-meta">

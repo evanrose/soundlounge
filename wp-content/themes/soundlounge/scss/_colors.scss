@@ -1,24 +1,30 @@
 //Colors
 
-$black: #000;
 $gray: #f4f4f4;
 $green: #73c640;
 $blue: #21dcfe;
 $pink: #fe3485;
 $purple: #dc39fa;
+$orange: #f7901e;
 
 .gray {
-	color: #f4f4f4;
+	color: $gray;
 }
 .green {
-	color: #73c640;
+	color: $green;
 }
 .blue  {
-	color: #21dcfe;
+	color: $blue;
 }
 .pink {
-	color: #fe3485;
+	color: $pink;
 }
 .purple {
-	color: #dc39fa;
+	color: $pink;
 }
+
+//color
+//white
+//fff
+//black
+//000

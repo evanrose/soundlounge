@@ -13,7 +13,7 @@ function sl_enqueue_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', 0, 0, 0 );
 	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js', 0, 0, 1 );
     
-	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', 0, 0, 1 );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.js', 0, 0, 1 );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', 0, 0, 1 );
 
 }
@@ -73,5 +73,15 @@ function sl_menu_item_classes( $classes, $item, $args ) {
 add_filter( 'nav_menu_css_class', 'sl_menu_item_classes', 10, 3 );
 
 /**
-@
+@ Add pagename to body class
 */
+
+//Page Slug Body Class
+function sl_add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'sl_add_slug_body_class' );

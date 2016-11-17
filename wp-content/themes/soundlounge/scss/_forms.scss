@@ -1,12 +1,12 @@
-.select-style {
+.select {
     
-    background: $gray url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
+    background: transparent url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
     overflow: hidden;
     height: 40px;        
 }
 
-.select-style select {
-    width: 130%;
+select {
+    width: 100%;
     border: none;
     box-shadow: none;
     background: transparent;
@@ -17,8 +17,13 @@
 
 }
 
-.select-style select:focus {
+select:focus {
     outline: none;
+}
+
+select option {
+
+    background: transparent;
 }
 
 label {
@@ -34,9 +39,28 @@ input[type="text"] {
 
 input[type="submit"] {
 
+    @include button;
     background-color: black;
     color: white;
     text-transform: uppercase;
+    width: auto;
+    font-family: Raleway-Medium,sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.56em;
+    line-height: 1.5;
+}
+
+.hs-form fieldset {
+
+    margin: 0 auto !important;
+}
+
+.hs-form fieldset.form-columns-1 .hs-input {
+
     width: 100%;
-    //@media (min-width: 480px) { width: 26px; }
+}
+
+.actions {
+ 
+    text-align: center;
 }

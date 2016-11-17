@@ -1,26 +1,15 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package WordPress
- * @subpackage themename
- */
+<?php get_header(); ?><?php while(have_posts()) : the_post(); ?>
 
-get_header(); ?>
+<section class="<?php echo $post->post_name; ?>-page">
 
-<h3>This is a page (page.php):</h3>
+	<?php get_template_part( 'tpl', 'title' ); ?>
 
-<?php while(have_posts()) : the_post(); ?>
+	<div class="row">
+		<div class="small-12 column">
+			<?php the_field( 'page_content' ); ?>
+		</div>
+	</div>
+	
+</section>
 
-	title: <?php the_title(); ?><br />
-	ID: <?php the_ID(); ?><br />
-	content: <?php the_content(); ?><br />
-
-<?php endwhile; ?>
-
-<?php get_footer(); ?>
+<?php endwhile; ?><?php get_footer(); ?>

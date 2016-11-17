@@ -1,0 +1,102 @@
+body.page-sidecar {
+
+	.navigation {
+
+		display: none;
+	}
+
+	main, main::after {
+
+		
+		border: none;
+	}
+
+	section.sidecar-page {
+
+		.logo-row {
+
+			margin: 100px auto auto auto; 
+		}
+
+		.row {
+
+			margin-bottom: 100px;
+		}
+
+		.with-border {
+
+			border-bottom: 2px solid $orange;
+		}
+
+		li {
+
+			width: 25%;
+			height: 125px;
+			line-height: 125px;
+			border-top: 2px solid $orange;
+			border-bottom: 2px solid $orange;
+			text-align: center;
+			margin: 0;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			a {
+
+				color: black;
+
+				&:hover {
+
+					color: $orange;
+				}
+			}
+		}
+
+		.map-meta-container {
+
+			position: relative;
+
+			.map-meta {
+
+			    overflow: hidden;
+			    position: absolute;
+			    top: 50%;
+			}
+		}
+
+		.google-maps {
+
+			float: left;
+		}
+	}
+
+	footer {
+
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
