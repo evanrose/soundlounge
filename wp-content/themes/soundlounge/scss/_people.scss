@@ -1,0 +1,59 @@
+.people-page {
+
+	//.person-container {
+
+		@media (min-width: 1024px) {
+
+			@include grid;
+		}
+
+		img, h3 {
+
+			-webkit-transition: all .3s ease-out;
+		    -moz-transition: all .3s ease-out;
+		    -o-transition: all .3s ease-out;
+		    transition: all .3s ease-out;
+		}
+
+		img {
+		  
+		  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+		  filter: grayscale(0%); /* FF 35+ */
+		}
+
+		& a:hover {
+
+			h3 {
+				color: $green !important;
+			}
+
+			img {
+			  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+			  filter: grayscale(100%); /* FF 35+ */
+			}
+		}
+	
+		&:last-child {
+
+			//float: left;
+		}
+	//}
+
+}
+
+.person-page {
+
+	.column, h2, h5, p {
+
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 1024px) { 
+
+		h2 {
+
+			margin-top: 40px;
+		}
+	}
+
+}

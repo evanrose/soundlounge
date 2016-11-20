@@ -13,17 +13,20 @@
 	    	<div class="">
 			<select onChange="loadItems(this.value, window.page)">
 				<option value="">All</option>
-				<option value="mixer">Mixers</option>
-				<option value="adr-mixer-film-television">Film + Television + ADR</option>
-				<option value="casting-director">Casting</option>
-				<option value="producer">Producers</option>
-				<option value="partner">Partners</option>
+				<option value="mix">Mixers</option>
+				<option value="tele">Film + Television + ADR</option>
+				<option value="cast">Casting</option>
+				<option value="prod">Producers</option>
+				<option value="part">Partners</option>
 			</select>
 			</div>
 	    </div>
 	</div>
-	<div id="people" class="row row-projects" data-equalizer data-options="equalize_on_stack: true"><!--  data-equalizer-mq="medium-up" -->
+	<div class="row row-people">
+		<div id="people" class="small-12 columns">
 
+
+		</div>
 	</div>
 
 </section>

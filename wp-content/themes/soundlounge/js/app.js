@@ -2,6 +2,36 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
+
+
+$( document ).ready(function() {
+    
+    $('.hs-button').removeClass('large').addClass('button');
+
+	initIsotope();
+});
+
+// Load Ajax Items
+
+function initIsotope() {
+
+	if ( $( ".js-tablet-portrait" ).css( "display" ) == "inline-block" ) {
+		setTimeout(function() {
+
+		$('.grid').isotope({
+			layoutMode: 'cellsByRow',
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			cellsByRow: {
+			columnWidth: '.grid-sizer',
+			rowHeight: '.grid-sizer'
+			}
+			});      
+
+		}, 1500);
+	}
+}
+
 function loadItems( slug, page ) {
 
 	//alert( page );
@@ -18,6 +48,9 @@ function loadItems( slug, page ) {
 	};
 	xhttp.open( "GET", "/wp-content/themes/soundlounge/tpl-" + page + ".php?slug=" + slug, true );
 	xhttp.send();
+
+	initIsotope();
+
 }
 
 if (typeof window.page !== 'undefined') {
@@ -30,8 +63,9 @@ if (typeof window.page !== 'undefined') {
     loadItems( slug, window.page );
 }
 
-$( document ).ready(function() {
-    $('.hs-button').removeClass('large').addClass('button');
-});
-	
 
+
+function clickTab( tab ) {
+
+	$('.' + tab + ' a')[0].click();
+}

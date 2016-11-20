@@ -25,7 +25,7 @@
 		width: 20px;
 		height: 6px;
 		content: "";
-	}
+	} 
 
 	&:before {
 		border-top: 2px solid white;
@@ -47,4 +47,51 @@
 	-webkit-align-items: $align;
 	justify-content: $justify;
 	-webkit-justify-content: $justify;
+}
+
+@mixin grid() {
+
+	.grid {
+	
+		max-width: 100%;
+	}
+	
+	.grid:after {
+	
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.grid-item {
+		
+		float: left;
+		width: 33%;
+		height: 450px;
+	}
+
+	.grid-item-square { 
+
+		width: 225px; 
+		height: 325px;	
+	}
+	
+	.grid-item-vertical {
+
+		width: 210px;
+		height: 384px; 
+	}
+
+	.grid-item-horizontal { 
+
+		width: 288px;
+		height: 265px; 
+	}
+
+	.grid-sizer {
+	
+		width: 33%;
+		height: 450px;
+		position: relative;
+	}
 }

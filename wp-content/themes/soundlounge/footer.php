@@ -32,18 +32,18 @@
 	            <li>
 	            	<div class="row collapse social-row">
 						<div class="small-6 columns">
-							<a href="https://www.facebook.com/SoundLoungeNY/"><span class="icon social-icon social-facebook"></span></a>
+							<a href="https://www.facebook.com/SoundLoungeNY/" target="_blank"><span class="icon social-icon social-facebook"></span></a>
 						</div>
 						<div class="small-6 columns">
-							<a href="https://twitter.com/soundloungeny"><span class="icon social-icon social-twitter"></span></a>
+							<a href="https://twitter.com/soundloungeny" target="_blank"><span class="icon social-icon social-twitter"></span></a>
 						</div>
 					</div>
 					<div class="row collapse social-row">
 						<div class="small-6 columns">
-							<a href="https://www.instagram.com/soundloungeny/"><span class="icon social-icon social-instagram"></span></a>
+							<a href="https://www.instagram.com/soundloungeny/" target="_blank"><span class="icon social-icon social-instagram"></span></a>
 						</div>
 						<div class="small-6 columns">
-							<a href="https://www.linkedin.com/company/sound-lounge"><span class="icon social-icon social-linkedin"></span></a>
+							<a href="https://www.linkedin.com/company/sound-lounge" target="_blank"><span class="icon social-icon social-linkedin"></span></a>
 						</div>
 					</div>
 				</li>
@@ -51,8 +51,10 @@
         </div>
     </div>
 </footer>
-
-</body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <?php wp_footer(); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/isotope.js"></script>
+<span class="js-tablet-portrait"></span>
+</body>
 </html>

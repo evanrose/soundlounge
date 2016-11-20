@@ -38,7 +38,7 @@ while ( $query->have_posts() ) : $query->the_post(); ?>
 			$awards = get_field( 'awards' );
 		 ?>
 
-		<div class="small-12 medium-6 large-4 columns project-container" data-equalizer-watch>
+		<div style="float: left;" class="small-12 medium-6 large-4 project-container" data-equalizer-watch>
 			<a href="<?php the_permalink(); ?>">
 				<div class="project-meta">
 					<h3><?php the_title(); ?></h3>

@@ -13,6 +13,18 @@ body.page-sidecar {
 
 	section.sidecar-page {
 
+		//Sidecar Projects are controlled in _projects.scss
+
+		a {
+
+			color: $orange;
+
+			&:hover {
+
+				color: black;
+			}
+		}
+
 		.logo-row {
 
 			margin: 100px auto auto auto; 
@@ -26,6 +38,11 @@ body.page-sidecar {
 		.with-border {
 
 			border-bottom: 2px solid $orange;
+		}
+
+		h2 {
+
+			margin-bottom: 40px;
 		}
 
 		li {
@@ -51,6 +68,19 @@ body.page-sidecar {
 			}
 		}
 
+
+		.project-container {
+
+			& a:hover {
+
+				h3 {
+					color: $orange !important;
+				}
+
+			}
+		}
+
+
 		.map-meta-container {
 
 			position: relative;
@@ -75,22 +105,6 @@ body.page-sidecar {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

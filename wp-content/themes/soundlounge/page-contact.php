@@ -7,10 +7,10 @@
 	<div class="row social-row text-center">
 		<div class="small-11 small-centered large-offset-7 large-5 columns">
 			<ul class="small-block-grid-4">
-				<li><a href="https://www.facebook.com/SoundLoungeNY/"><span class="icon social-icon social-facebook"></span></a></li>
-				<li><a href="https://twitter.com/soundloungeny"><span class="icon social-icon social-twitter"></span></a></li>
-				<li><a href="https://www.instagram.com/soundloungeny/"><span class="icon social-icon social-instagram"></span></a></li>
-				<li><a href="https://www.linkedin.com/company/sound-lounge"><span class="icon social-icon social-linkedin"></span></a></li>
+				<li><a href="https://www.facebook.com/SoundLoungeNY/" target="_blank"><span class="icon social-icon social-facebook"></span></a></li>
+				<li><a href="https://twitter.com/soundloungeny" target="_blank"><span class="icon social-icon social-twitter"></span></a></li>
+				<li><a href="https://www.instagram.com/soundloungeny/" target="_blank"><span class="icon social-icon social-instagram"></span></a></li>
+				<li><a href="https://www.linkedin.com/company/sound-lounge" target="_blank"><span class="icon social-icon social-linkedin"></span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,20 +33,13 @@
 		</div>
 	</div>
 
-	<div class="row">
-
-	</div>
-
 	<div class="row form-row">
 		<div class="small-12 medium-10 large-8 medium-centered column">
 
 			<div class="row fields-row">
 
-				<div class="small-12">
-					
-					<div class="small-12 column">
-						<h3 class="text-center">Join our newsletter:</h3>
-					</div>
+				<div class="small-12 column">
+					<h3 class="text-center">Join our newsletter:</h3>
 
 <!--[if lte IE 8]>
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -59,31 +52,6 @@
    formId: '4a8c454e-32ea-4c1c-90e5-fd574ee78e80'
  });
 </script>					
-					
-					<!-- <div class="small-12 medium-6 column">
-						<label>First Name
-	        			<input type="text" placeholder="">
-	      				</label>
-
-					</div>
-					<div class="small-12 medium-6 column">
-						<label>Last Name
-	        			<input type="text" placeholder="">
-	      				</label>
-					</div>
-					<div class="small-12 medium-12 column">
-						<label>Email Address
-	        			<input type="email" placeholder="">
-	      				</label>
-					</div>
-					<div class="small-12 show-for-small-only column">
-						<input type="submit" class="button" value="Get updates!">
-					</div>
-					<div class="hide-for-small medium-8 column medium-centered">
-						<input type="submit" class="button" value="Get updates from us!">
-					</div>
-
-					-->
 				</div>
 			</div>
 		</div>

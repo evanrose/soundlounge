@@ -19,6 +19,7 @@
 		</div>
 	</div>
 
+	<a name="about"></a>
 	<div class="row with-border">
 		<div class="small-12 column">
 			<h2>About</h2>
@@ -31,22 +32,27 @@
 		</div>
 	</div>
 
+	<script type="text/javascript">window.page = "projects";</script>
+	<script type="text/javascript">window.slug = "sidecar";</script>
+
+	<a name="work"></a>
 	<div class="row with-border">
 		<div class="small-12 column">
 			<h2>Recent Work</h2>
 		</div>
-		<div class="small-12 column">
-			<div id="projects" class="row row-projects collapse" data-equalizer data-options="equalize_on_stack: true">
+		<div class="small-12">
+			<div id="projects" class="row row-projects" data-equalizer data-options="equalize_on_stack: true">
 			</div>
 		</div>
 	</div>
 
-	<div class="row">
+	<a name="people"></a>
+	<div class="row with-border">
 		<div class="small-12 column">
 			<h2>People</h2>
 		</div>
-		<div class="small-12 column">
-			<div id="" class="row row-projects collapse" data-equalizer data-options="equalize_on_stack: true">
+		<div class="small-12">
+			<div id="" class="row row-projects" data-equalizer data-options="equalize_on_stack: true">
 
 			<?php
 				$args = array(
@@ -66,7 +72,7 @@
 
 				while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<div style="float:left;" class="small-12 medium-4 large-3 columns person-container" data-equalizer-watch>
+					<div style="float:left;" class="small-12 medium-4 large-3 person-container" data-equalizer-watch>
 													
 						<div class="image-container"><img src="<?php the_field( 'sidecar_image' ); ?>" alt="<?php the_title(); ?>"></div>
 						<div class="people-meta">
@@ -82,31 +88,25 @@
 		</div>
 	</div>
 
-
+	<a name="contact"></a>
 	<div class="row form-row">
+		
 		<div class="small-12 medium-10 large-8 medium-centered column">
-			<div class="row fields-row">
-			<div class="small-12">
-					
-					<div class="small-12 column">
-						<h3 class="text-center">Join our newsletter:</h3>
-					</div>
+		<form method="post" data-abide>
 
-					<!--[if lte IE 8]>
-					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-					<![endif]-->
-					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-					<script>
-					 hbspt.forms.create({ 
-					   css: '',
-					   portalId: '38071',
-					   formId: '4a8c454e-32ea-4c1c-90e5-fd574ee78e80'
-					 });
-					</script>					
-				</div>
+			<div class="row fields-row">
+				<div class="small-12">
+
+					<div class="small-12 column">
+						<h3 class="text-center">Casting Inquiries</h3>
+					</div>	
+					
+					<?php echo do_shortcode( '[contact-form-7 id="328" title="Contact form 1"]' ); ?>
+
+				</div>	
 			</div>
 		</div>
-	</div>	
+	</div>
 	
 
 	<div class="row" data-equalizer data-equalizer-mq="large-up">
@@ -127,7 +127,7 @@
 
 	<div class="row">
 		<div class="small-12 column text-center">
-			<p>&copy; Copyright Sidecar Casting <?php echo date( 'Y' ); ?> All Rights Reserved.</p>
+			<p>&copy; Copyright Sidecar Casting <?php echo date( 'Y' ); ?>. All Rights Reserved.</p>
 		</div>
 	</div>
 	

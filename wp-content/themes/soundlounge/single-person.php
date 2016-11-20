@@ -22,7 +22,7 @@
 					<h4><?php echo implode(' &#149; ', $positions); ?></h4>
 					<p><?php the_field( 'bio' ) ?></p>
 				</div>
-				<div class="small-12 column">
+				<div class="small-12 large-6 column">
 					<ul class="small-block-grid-4">
 						<?php if ( get_field( 'facebook_url' ) ) { ?>
 							<li><a href="<?php the_field( 'facebook_url' ); ?>"><span class="icon-container"><span class="icon social-icon social-facebook"></span></span></a></li>
@@ -43,7 +43,7 @@
 
 					if ( get_field( 'email_address' ) ) {
 						$email_address = get_field( 'email_address' );
-						$email_text = $email_address;
+						$email_text = '';
 					}
 					if ( in_array( 'Sound Designer', $positions ) ) { 
 						$email_address = 'producers@soundlounge.com';
@@ -53,10 +53,10 @@
 					if ( $email_address ) { ?>
 
 						<div class="email-icon-container">
-								<span class="icon-container">
+								<p><span class="icon-container">
 									<span class="icon social-icon email-icon email-icon-40"></span>
 								</span>
-								<span class="text text-40"><?php echo $email_text; ?><a class="email-address" href="mailto:<?php echo antispambot( $email_address ); ?>"><?php echo antispambot( $email_address ); ?></a></span>
+								<span class="text text-40"><?php echo $email_text; ?><a class="email-address" href="mailto:<?php echo antispambot( $email_address ); ?>"><?php echo antispambot( $email_address ); ?></a></span></p>
 						</div>
 
 					<?php } ?>

@@ -1,0 +1,94 @@
+.project-page {
+
+	.project-meta {
+
+		margin-top: 20px;
+
+		h3, h5 {
+
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.projects-page, .sidecar-page {
+
+	.row-projects {
+
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	.project-container {
+
+		&:last-child {
+
+			float: left;
+		}
+
+		img, h3 {
+
+			-webkit-transition: all .3s ease-out;
+		    -moz-transition: all .3s ease-out;
+		    -o-transition: all .3s ease-out;
+		    transition: all .3s ease-out;
+		}
+
+		img {
+		  
+		  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+		  filter: grayscale(0%); /* FF 35+ */
+		}
+
+		& a:hover {
+
+			h3 {
+				color: $green !important;
+			}
+
+			img {
+			  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+			  filter: grayscale(100%); /* FF 35+ */
+			}
+
+		}
+	}
+
+	.row-projects > div {
+
+		position: relative;
+		padding: 5px !important;
+
+		img {
+			
+			z-index: 1;
+		}
+
+		.project-meta {
+
+			z-index: 2;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			margin-right: 25px;
+			top: 45%;
+			transform: translate( 20px, -25%);
+
+			h3, h4, h5, p {
+
+				color: white;
+			}
+
+			h3 {
+
+				margin-bottom: 5px;
+
+				&:hover {
+
+					color: $green;
+				}
+
+			}
+		}
+	}
+}

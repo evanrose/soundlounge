@@ -38,7 +38,7 @@
 	<div class="row row-full">
 		<div class="small-12 medium-6 column project-meta">
 			<h3><?php the_title(); ?></h3>
-			<h5><?php echo implode(' &#149; ', $roles); ?></h5>
+			<h4><?php echo implode(' &#149; ', $roles); ?></h4>
 			<?php if ( get_field( 'awards' ) ) { ?>
 				<h4><?php the_field( 'awards' ); ?></h4>
 			<?php } ?>
@@ -46,7 +46,7 @@
 		<div class="small-12 medium-6 column project-meta">
 			<div class="row">
 				<div class="small-12 medium-9 column medium-text-right">
-					<a class="button" href="/work/">More Work</a>
+					<a class="button tiny secondary" href="/work/">More Work</a>
 				</div>
 				<div class="small-12 medium-3 column">
 					<span class="icon-container"><span class="icon arrow-icon"></span></span>

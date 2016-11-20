@@ -274,7 +274,7 @@ $paragraph-font-size: rem-calc(12);
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-font-color-hover: $blue;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -443,7 +443,7 @@ $paragraph-font-size: rem-calc(12);
 $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
+$button-tny: rem-calc(10);
 // $button-sml: rem-calc(14);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
@@ -457,6 +457,7 @@ $include-html-button-classes: $include-html-classes;
 $button-font-family: Raleway-Medium, sans-serif;
 $button-font-color: white;
 $button-font-color-alt: white;
+$secondary-button-font-color: black;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
@@ -465,19 +466,21 @@ $button-font-color-alt: white;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: -20%;
 
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
 $button-bg-color: black;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-hover: scale-color($gray, $lightness: $button-function-factor);
+$secondary-button-bg-color: $gray;
+$secondary-button-bg-hover: scale-color(black, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
 // $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
 // $success-button-border-color: $success-button-bg-hover;
-// $alert-button-bg-hover: scale-color($alert-color, $lightness: $button-function-factor);
+$alert-button-bg-hover: $gray;
 // $alert-button-border-color: $alert-button-bg-hover;
 // $warning-button-bg-hover: scale-color($warning-color, $lightness: $button-function-factor);
 // $warning-button-border-color: $warning-button-bg-hover;

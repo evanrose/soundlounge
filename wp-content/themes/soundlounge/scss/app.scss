@@ -1,6 +1,7 @@
 @import "colors";
 @import "mixins";
 @import "sprites";
+@import "viewport";
 
 @import "settings";
 @import "foundation";
@@ -9,13 +10,15 @@
 
 @import "fonts";
 @import "nav";
-@import "main";
-	@import "forms";
-	@import "wwd";
-@import "footer";
+@import "forms";
 @import "home";
-	@import "sidecar";
+@import "main";
+	@import "wwd";
+	@import "projects";
+	@import "people";
+@import "footer";
 
+@import "sidecar";
 @import "styleguide";
 
 body, p {

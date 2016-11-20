@@ -17,183 +17,37 @@ main {
 .button {
 
 	text-transform: uppercase;
+
+	&:hover {
+
+		color: #000;
+	}
+
+	&.tiny {
+
+		font-size: 10px;
+	}
+
+	&.alert:hover, &.alert:focus, &.alert:hover, &.alert:focus {
+
+		color: black;
+	}
+
+	&.secondary {
+
+		color: black;
+
+		&:hover {
+
+			color: white;
+		}
+	}
 }
 
 .row-full {
 
 	width: 100%;
 	@media (min-width: 769px) { width: auto; }
-}
-
-.people-page {
-
-	//display: none;
-
-	/*
-	.person-container {
-
-		margin-bottom: 20px;
-	}
-
-	h3 {
-
-		margin: 20px 0 5px;
-		line-height: 1.5;
-	}
-
-	h4 {
-
-		line-height: 1.75;
-	}
-	*/
-
-	.person-container {
-
-		&:last-child {
-
-			float: left;
-		}
-
-		img, h3 {
-
-			-webkit-transition: all .3s ease-out;
-		    -moz-transition: all .3s ease-out;
-		    -o-transition: all .3s ease-out;
-		    transition: all .3s ease-out;
-		}
-
-		img {
-		  
-		  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-		  filter: grayscale(0%); /* FF 35+ */
-		}
-
-		& a:hover {
-
-			h3 {
-				color: $green !important;
-			}
-
-			img {
-			  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-			  filter: grayscale(100%); /* FF 35+ */
-			}
-
-		}
-	}
-
-}
-
-.person-page {
-
-	.column, h2, h5, p {
-
-		margin-bottom: 20px;
-	}
-
-	@media (min-width: 1024px) { 
-
-		h2 {
-
-			margin-top: 40px;
-		}
-	}
-
-}
-
-.project-page {
-
-	.project-meta {
-
-		margin-top: 20px;
-
-		h3, h5 {
-
-			margin-bottom: 1em;
-		}
-	}
-}
-
-.projects-page {
-
-	.row-projects {
-
-		max-width: 95%;
-		margin: 0 auto;
-	}
-
-	.project-container {
-
-		&:last-child {
-
-			float: left;
-		}
-
-		img, h3 {
-
-			-webkit-transition: all .3s ease-out;
-		    -moz-transition: all .3s ease-out;
-		    -o-transition: all .3s ease-out;
-		    transition: all .3s ease-out;
-		}
-
-		img {
-		  
-		  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-		  filter: grayscale(0%); /* FF 35+ */
-		}
-
-		& a:hover {
-
-			h3 {
-				color: $green !important;
-			}
-
-			img {
-			  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-			  filter: grayscale(100%); /* FF 35+ */
-			}
-
-		}
-	}
-
-	.row-projects > div {
-
-		position: relative;
-		padding: 5px !important;
-
-		img {
-			
-			z-index: 1;
-		}
-
-		.project-meta {
-
-			z-index: 2;
-
-			h3, h4, h5, p {
-
-				color: white;
-			}
-
-			h3 {
-
-				margin-bottom: 5px;
-
-				&:hover {
-
-					color: $green;
-				}
-
-			}
-			
-			overflow: hidden;
-			position: absolute;
-			left: 0;
-			top: 45%;
-			transform: translate( 20px, -25%);
-		}
-	}
 }
 
 //CONTACT
@@ -237,9 +91,10 @@ main {
 
 .form-row {
 
+	margin: 45px auto 70px !important;
+
 	> div {
 			
-		margin-top: 20px;
 		background-color: $gray;
 	}
 
@@ -258,7 +113,7 @@ main {
 .google-maps {
     
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    padding-bottom: 45%; // This is the aspect ratio
     height: 0;
     overflow: hidden;
     float: none;

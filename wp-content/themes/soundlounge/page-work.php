@@ -17,7 +17,6 @@
 				<option value="long-format-mix">Long Format Mix</option>
 				<option value="casting">Casting</option>
 				<option value="radio">Radio</option>
-				<option value="all">All</option>
 				</select>
 			</div>
 	    </div>
