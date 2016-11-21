@@ -34,12 +34,6 @@
 
         display: block;
     }
-
-    .js-tablet-portrait {
-
-        display: inline-block;
-        position: absolute;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -53,6 +47,12 @@
 
         display: inline-block;
     }
+
+    .js-tablet-landscape {
+
+        position: absolute;
+    }
+
 }
 
 @media (min-width: 1280px) {

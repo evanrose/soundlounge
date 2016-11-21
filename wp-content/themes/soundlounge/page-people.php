@@ -9,17 +9,15 @@
 	<?php endwhile; ?>
 
 	<div class="row">
-	    <div class="small-12 medium-4 medium-centered columns select">
-	    	<div class="">
-			<select onChange="loadItems(this.value, window.page)">
+	    <div class="small-12 medium-4 medium-centered columns">
+			<select class="dropdown" onChange="loadItems(this.value, window.page)">
 				<option value="">All</option>
 				<option value="mix">Mixers</option>
-				<option value="tele">Film + Television + ADR</option>
+				<option value="tele">Film + TV + ADR</option>
 				<option value="cast">Casting</option>
 				<option value="prod">Producers</option>
 				<option value="part">Partners</option>
 			</select>
-			</div>
 	    </div>
 	</div>
 	<div class="row row-people">

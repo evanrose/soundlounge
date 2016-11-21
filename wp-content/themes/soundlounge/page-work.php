@@ -9,16 +9,14 @@
 	<?php endwhile; ?>
 
 	<div class="row">
-	    <div class="small-12 medium-4 medium-centered columns ">
-			<div class="select">
-				<select onChange="loadItems(this.value, window.page)">
+	    <div class="small-12 medium-4 medium-centered columns">
+			<select class="dropdown" onChange="loadItems(this.value, window.page)">
 				<option value="featured">Featured</option>
 				<option value="commercial-mix">Commercial Mix</option>
 				<option value="long-format-mix">Long Format Mix</option>
 				<option value="casting">Casting</option>
 				<option value="radio">Radio</option>
-				</select>
-			</div>
+			</select>
 	    </div>
 	</div>
 	<div id="projects" class="row row-projects collapse" data-equalizer data-options="equalize_on_stack: true">

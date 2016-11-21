@@ -6,9 +6,9 @@
 
 <div class="row small-12 wwd-tabs">
 	<div class="columns">
-		<form class="select-style show-for-small-only">
+		<form class="show-for-small-only">
 		
-	        <select onChange="clickTab(this.value)">
+	        <select class="dropdown" onChange="clickTab(this.value)">
 				<option value="tab-1">Commercials</option>
 				<option value="tab-2">Casting</option>
 				<option value="tab-3">Film TV ADR</option>
@@ -29,9 +29,8 @@
 					$tab_title_slug = explode( ' ', $tab_title );
 
 					if ( $i == 1 ) {
-						$active = 'active';
+						//$active = 'active';
 						$selected = 'true';
-						//echo 'true';
 					}
 					else {
 						$active = 'not-active';
@@ -171,7 +170,7 @@
 							<div class="row">
 								<div class="small-12 about-slider columns">
 									<h3 class=""><?php echo $slideshow_title; ?></h3>
-									<ul class="about-slider oribit" data-orbit data-options="animation:slide;
+									<ul class="about-slider orbit" data-orbit data-options="animation:slide;
 										pause_on_hover:true;
 										animation_speed:500;
 										navigation_arrows:true;
@@ -204,7 +203,7 @@
 							<div class="row">
 								<div class="small-12 about-slider columns">
 									<h3 class=""><?php echo $slideshow_title; ?></h3>
-									<ul class="about-slider oribit" data-orbit data-options="animation:slide;
+									<ul class="about-slider orbit" data-orbit data-options="animation:slide;
 										pause_on_hover:true;
 										animation_speed:500;
 										navigation_arrows:true;
@@ -244,7 +243,7 @@
 		<div class="row">
 			<div class="small-12 about-slider columns">
 				<h2 class=""><?php echo $slideshow_title; ?></h2>
-				<ul class="about-slider oribit" data-orbit data-options="animation:slide;
+				<ul class="about-slider orbit" data-orbit data-options="animation:slide;
 					pause_on_hover:true;
 					animation_speed:500;
 					navigation_arrows:true;

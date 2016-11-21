@@ -8,9 +8,16 @@
 <?php wp_head(); ?>
 <script type="text/javascript">var $= jQuery.noConflict();</script>
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/bower_components/modernizr/modernizr.js"></script>
+<script>
+if (location.hash) {
+  setTimeout(function() {
 
+    window.scrollTo(0, 0);
+  }, 1);
+}
+</script>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>><span class="js-tablet-landscape"></span>
 
 <!-- nav -->
 

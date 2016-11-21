@@ -1,21 +1,24 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
+jQuery(document).foundation();
 
-
-
-$( document ).ready(function() {
+$(document).ready(function() {
     
     $('.hs-button').removeClass('large').addClass('button');
-
 	initIsotope();
 });
+
+function clickTab( tab ) {
+
+	$('.' + tab + ' a')[0].click();
+}
 
 // Load Ajax Items
 
 function initIsotope() {
 
-	if ( $( ".js-tablet-portrait" ).css( "display" ) == "inline-block" ) {
+	if ( $( ".js-tablet-landscape" ).css( "position" ) == "absolute" ) {
+
 		setTimeout(function() {
 
 		$('.grid').isotope({
@@ -33,8 +36,6 @@ function initIsotope() {
 }
 
 function loadItems( slug, page ) {
-
-	//alert( page );
 
 	if ( slug == null ) {
 		slug = '';
@@ -61,11 +62,4 @@ if (typeof window.page !== 'undefined') {
 	else var slug = null;
     
     loadItems( slug, window.page );
-}
-
-
-
-function clickTab( tab ) {
-
-	$('.' + tab + ' a')[0].click();
 }

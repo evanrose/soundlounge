@@ -55,6 +55,6 @@
 <?php wp_footer(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/isotope.js"></script>
-<span class="js-tablet-portrait"></span>
+
 </body>
 </html>

@@ -14,12 +14,14 @@ add_image_size( 'square', 768, 768, 1 );
 function sl_enqueue_scripts() {
 	
 	//HEADER
+	wp_enqueue_style( 'dropdowncss', get_template_directory_uri() . '/stylesheets/easydropdown.css' );
 	wp_enqueue_style( 'css', get_template_directory_uri() . '/stylesheets/app.css' );
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', 0, 0, 0 );
+	wp_enqueue_script( 'dropdownjs', get_template_directory_uri() . '/js/easydropdown.js', 0, 0, 0 );
+	
 
 	//FOOTER
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.js', 0, 0, 1 );
-	//wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.js', 0, 0, 1 );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', 0, 0, 1 );
 
 }
@@ -61,6 +63,8 @@ add_filter('nav_menu_css_class' , 'sl_nav_class' , 10 , 2);
 /**
 @ Add widget area for dropdown
 */
+
+/* ??? */
 
 function sl_menu_item_classes( $classes, $item, $args ) {
 	if( 'header' !== $args->theme_location )
@@ -115,7 +119,7 @@ function check_orientation( $w, $h ) {
 @ Check if position is in array
 */
 
-function contains($str, array $arr)
+function contains( $str, array $arr )
 {
     foreach( $arr as $a ) {
         if ( stripos( $a, $str ) !== false ) return true;

@@ -2,6 +2,22 @@
 
 <section class="sidecar-page">
 
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="false" role="dialog">
+	<div class="modal-wrapper row small-12 large-10">
+		<div class="video-wrapper">
+		  <iframe id="myModal"  src="https://player.vimeo.com/video/150474666?color=df5840&amp;title=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	  <div class="modal-info">
+		  <h3>Video title</h3>
+		  <p>Some info about the video</p>
+	  </div>
+	  <div class="project-share small-12 medium-4"> 
+		  <a class="social-place facebook">f</a>
+	      <a class="social-place linked">l</a>
+	   </div>
+	</div>
+</div>	
+
 	<div class="row logo-row text-center">
 		<div class="small-12">
 			<img alt="Sidecar Casting" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/Sidecar-Logo.png">
