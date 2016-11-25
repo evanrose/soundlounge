@@ -2,7 +2,21 @@
 
 <section class="contact-page">
 
+	<?php if ( $_GET['submissionGuid'] ) { ?>
+
+		<div class="row">
+			<div class="small-12 column">
+				<div data-alert class="alert-box">
+	  				<h5>Thanks for joining the newsletter!</h5>
+		  			<a href="#" class="close">&times;</a>
+				</div>	  			
+		  	</div>
+		</div>
+	<?php } ?>
+
 	<?php get_template_part( 'tpl', 'title' ); ?>
+
+
 
 	<div class="row social-row text-center">
 		<div class="small-11 small-centered large-offset-7 large-5 columns">
@@ -17,19 +31,24 @@
 
 	<div class="row principals-row centered">
 		<div class="small-12 medium-6 large-4 columns">
-			<h3 class="contact-name">Mike Gullo</h3>
-			<h5 class="contact-title green">Executive Producer</h5>
-			<span class="contact-email"><a class="email-address" href="mailto:mike@soundlounge.com">mike@soundlounge.com</a></span>
+			<a class="email-address" href="mailto:mike@soundlounge.com">
+				<h3 class="contact-name">Mike Gullo</h3>
+				<h5 class="contact-title green">Executive Producer</h5>
+				<span class="contact-email">mike@soundlounge.com</a></span>
+			</a>
 		</div>
 			<div class="small-12 medium-6 large-4 columns">
-			<h3 class="contact-name">Rob Browning</h3>
-			<h5 class="contact-title pink">Executive Producer, Film &#149; Television</h5>
-			<span class="contact-email"><a class="email-address" href="mailto:robb@soundlounge.com">robb@soundlounge.com</a></span>
+			<a class="email-address" href="mailto:robb@soundlounge.com">
+				<h3 class="contact-name">Rob Browning</h3>
+				<h5 class="contact-title pink">Executive Producer, Film &#149; Television</h5>
+				<span class="contact-email">robb@soundlounge.com</a></span>
 		</div>
 		<div class="small-12 medium-6 medium-centered large-4 large-uncentered columns">
-			<h3 class="contact-name">Carrie Faverty</h3>
-			<h5 class="contact-title purple">Casting Director</h5>
-			<span class="contact-email"><a class="email-address" href="mailto:carrie@soundlounge.com">carrie@soundlounge.com</a></span>
+			<a class="email-address" href="mailto:carrie@soundlounge.com">
+				<h3 class="contact-name">Carrie Faverty</h3>
+				<h5 class="contact-title purple">Casting Director</h5>
+				<span class="contact-email">carrie@soundlounge.com</span>
+			</a>
 		</div>
 	</div>
 

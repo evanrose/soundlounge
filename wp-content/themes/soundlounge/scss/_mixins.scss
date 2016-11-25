@@ -24,7 +24,10 @@
 		margin: 0 auto;
 		width: 20px;
 		height: 6px;
-		content: "";
+		
+		@media (min-width: 769px) { 
+			content: "";
+		}
 	} 
 
 	&:before {
@@ -67,7 +70,8 @@
 		
 		float: left;
 		width: 33%;
-		height: 450px;
+		height: 400px;
+		margin-bottom: 0;
 	}
 
 	.grid-item-square { 
@@ -91,7 +95,7 @@
 	.grid-sizer {
 	
 		width: 33%;
-		height: 450px;
+		height: 400px;
 		position: relative;
 	}
 }

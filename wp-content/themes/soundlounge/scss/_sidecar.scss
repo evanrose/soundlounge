@@ -1,5 +1,10 @@
 body.page-sidecar {
 
+	.lity {
+
+		background: rgba(0, 0, 0, 0.7);
+	}
+
 	.navigation {
 
 		display: none;
@@ -27,18 +32,50 @@ body.page-sidecar {
 
 		.logo-row {
 
-			margin: 100px auto auto auto; 
+			margin-top: 0;
+
+			@media (min-width: 768px) {
+				margin: 100px auto auto auto;
+			}
 		}
 
 		.row {
 
-			margin-bottom: 100px;
+			margin-bottom: 40px;
+
+			@media (min-width: 768px) {
+				margin-bottom: 100px;
+			}
+		}
+
+		.inline-list {
+
+			margin: 0;
 		}
 
 		.with-border {
 
 			border-bottom: 2px solid $orange;
 		}
+
+		.alert-box {
+
+			background-color: $orange;
+			border: none;
+			
+			h5 {
+
+				color: white;
+			}
+
+			a.close, a.close:hover {
+
+				color: white;
+				opacity: 1;
+			}
+		}
+
+
 
 		h2 {
 
@@ -87,9 +124,15 @@ body.page-sidecar {
 
 			.map-meta {
 
-			    overflow: hidden;
-			    position: absolute;
-			    top: 50%;
+				margin-top: 20px;
+				   
+				@media (min-width: 768px) {
+
+					margin-top: 0;
+					overflow: hidden;
+				    position: absolute;
+				    top: 50%;
+				}
 			}
 		}
 

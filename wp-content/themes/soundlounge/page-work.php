@@ -13,6 +13,7 @@
 			<select class="dropdown" onChange="loadItems(this.value, window.page)">
 				<option value="featured">Featured</option>
 				<option value="commercial-mix">Commercial Mix</option>
+				<option value="sound-design">Sound Design</option>
 				<option value="long-format-mix">Long Format Mix</option>
 				<option value="casting">Casting</option>
 				<option value="radio">Radio</option>

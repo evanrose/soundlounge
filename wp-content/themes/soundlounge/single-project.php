@@ -3,8 +3,8 @@
 <?php 
 	$roles = wp_get_post_terms( $post->ID, 'role');
 	$roles = wp_list_pluck( $roles, 'name' );
-	
- ?>
+	$roles = array_diff( $roles, array( 'Featured' ) );
+?>
 
 <section class="project-page">
 	<div class="row">
@@ -42,19 +42,18 @@
 			<?php if ( get_field( 'awards' ) ) { ?>
 				<h4><?php the_field( 'awards' ); ?></h4>
 			<?php } ?>
+
 		</div>
 		<div class="small-12 medium-6 column project-meta">
 			<div class="row">
-				<div class="small-12 medium-9 column medium-text-right">
+				<div class="small-12 column medium-text-right">
 					<a class="button tiny secondary" href="/work/">More Work</a>
 				</div>
-				<div class="small-12 medium-3 column">
-					<span class="icon-container"><span class="icon arrow-icon"></span></span>
+				<div class="small-12 column medium-text-right" style="">
+					<small class="sharify-text">Share:</small> <?php echo do_shortcode( '[sharify]' ); ?> 
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 
 </section>

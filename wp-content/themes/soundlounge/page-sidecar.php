@@ -2,24 +2,20 @@
 
 <section class="sidecar-page">
 
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="false" role="dialog">
-	<div class="modal-wrapper row small-12 large-10">
-		<div class="video-wrapper">
-		  <iframe id="myModal"  src="https://player.vimeo.com/video/150474666?color=df5840&amp;title=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<?php if ( $_POST['_wpcf7'] ) { ?>
+
+		<div class="row">
+			<div class="small-12 column">
+				<div data-alert class="alert-box">
+	  				<h5></h5>
+		  			<a href="#" class="close">&times;</a>
+				</div>	  			
+		  	</div>
 		</div>
-	  <div class="modal-info">
-		  <h3>Video title</h3>
-		  <p>Some info about the video</p>
-	  </div>
-	  <div class="project-share small-12 medium-4"> 
-		  <a class="social-place facebook">f</a>
-	      <a class="social-place linked">l</a>
-	   </div>
-	</div>
-</div>	
+	<?php } ?>
 
 	<div class="row logo-row text-center">
-		<div class="small-12">
+		<div class="small-12 column">
 			<img alt="Sidecar Casting" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/Sidecar-Logo.png">
 		</div>
 	</div>
@@ -48,16 +44,60 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">window.page = "projects";</script>
-	<script type="text/javascript">window.slug = "sidecar";</script>
-
 	<a name="work"></a>
 	<div class="row with-border">
 		<div class="small-12 column">
 			<h2>Recent Work</h2>
 		</div>
 		<div class="small-12">
-			<div id="projects" class="row row-projects" data-equalizer data-options="equalize_on_stack: true">
+			<div id="" class="row row-projects" data-equalizer data-options="equalize_on_stack: true">
+
+				<?php
+
+					$slug = 'sidecar';
+
+					$args = array(
+					    'post_type' => 'project',
+					    'posts_per_page' => -1,
+					);
+
+					if ( $slug ) {
+					    $args['tax_query'] = array(
+					    	array(
+						        'taxonomy' => 'role',
+								'field'    => 'slug',
+								'terms'    => $slug,
+							)
+					    );
+					}
+
+					$query = new WP_Query( $args );
+
+					while ( $query->have_posts() ) : $query->the_post(); ?>
+
+					<?php 
+						$roles = wp_get_post_terms( $post->ID, 'role');
+						//var_dump( $positions );
+						$roles = wp_list_pluck( $roles, 'name' );
+						$awards = get_field( 'awards' );
+					 ?>
+
+					<div style="float: left;" class="small-12 medium-6 large-4 project-container" data-equalizer-watch>
+						<a class="" href="//player.vimeo.com/video/<?php the_field( 'vimeo-id' ); ?>" data-lity="">
+							<div class="project-meta">
+								<h3><?php the_title(); ?></h3>
+								<h4><?php echo implode(' &#149; ', $roles); ?></h4>
+								<?php if ( $awards) { ?>
+									<h4><?php echo $awards; ?></h4>
+								<?php } ?>
+							</div>
+							<div class="image-container"><?php echo get_the_post_thumbnail(); ?></div>
+						</a>
+					</div>
+				
+					<?php wp_reset_postdata(); ?>
+				<?php endwhile; ?>
+
 			</div>
 		</div>
 	</div>
@@ -126,10 +166,10 @@
 	
 
 	<div class="row" data-equalizer data-equalizer-mq="large-up">
-		<div class="small-12 medium-6 column google-maps" data-equalizer-watch>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9866679609718!2d-73.99241818459426!3d40.74031887932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3ebd851ab%3A0xa16401c174b5cecb!2sSound+Lounge!5e0!3m2!1sen!2sus!4v1479156605483" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="small-12 large-6 column google-maps" data-equalizer-watch>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9866679609718!2d-73.99241818459426!3d40.74031887932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3ebd851ab%3A0xa16401c174b5cecb!2sSound+Lounge!5e0!3m2!1sen!2sus!4v1479156605483" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-		<div class="small-12 medium-6 column map-meta-container" data-equalizer-watch>
+		<div class="small-12 large-6 column map-meta-container" data-equalizer-watch>
 			<div class="map-meta">
 				<h3>On Camera Casting Director</h3>
 				<h4>Anthony Pichette</h4>

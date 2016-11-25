@@ -246,7 +246,7 @@ $h2-font-reduction: rem-calc(36);
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
+$small-font-size: rem-calc(12);
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
@@ -350,7 +350,7 @@ $anchor-font-color-hover: $blue;
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-alert-classes: $include-html-classes;
+$include-html-alert-classes: $include-html-classes;
 
 // We use this to control alert padding.
 // $alert-padding-top: rem-calc(14);
@@ -360,8 +360,7 @@ $anchor-font-color-hover: $blue;
 
 // We use these to control text style.
 // $alert-font-weight: $font-weight-normal;
-// $alert-font-size: rem-calc(13);
-// $alert-font-color: $white;
+$alert-font-size: rem-calc(16);
 // $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
 
 // We use this for close hover effect.
@@ -374,7 +373,6 @@ $anchor-font-color-hover: $blue;
 // $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
-// $alert-close-color: $oil;
 // $alert-close-top: 50%;
 // $alert-close-position: rem-calc(4);
 // $alert-close-font-size: rem-calc(22);

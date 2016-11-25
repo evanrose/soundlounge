@@ -2,6 +2,18 @@
 
 	//.person-container {
 
+
+		.grid-item {
+
+			margin-bottom: 20px;
+		}
+
+		@media (min-width: 768px) { 
+			
+			margin-bottom: 0;
+		}
+
+
 		@media (min-width: 1024px) {
 
 			@include grid;
@@ -41,7 +53,12 @@
 
 }
 
-.person-page {
+.person-page, .news-page {
+
+	[class*="block-grid-"] > li {
+
+		padding-bottom: 0;
+	}
 
 	.column, h2, h5, p {
 
@@ -53,6 +70,33 @@
 		h2 {
 
 			margin-top: 40px;
+		}
+	}
+}
+
+.news-page {
+
+	.row-news {
+
+		@media (min-width: 768px) { 
+
+			margin-top: 40px;
+		}
+	}
+
+	@media (min-width: 1024px) { 
+
+		h2 {
+
+			margin-top: 0;
+		}
+	}
+
+	.video-wrapper {
+
+		p {
+
+			display: none;
 		}
 	}
 

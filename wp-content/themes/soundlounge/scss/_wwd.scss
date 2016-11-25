@@ -1,5 +1,10 @@
 .what-we-do {
 
+	.slick-prev::before, .slick-next::before {
+
+		color: $blue;
+	}
+
 	.tabs-content h2, .about-slider h2 {
 
 		padding: 20px 0 40px;
@@ -8,12 +13,6 @@
 	section > .row {
 
 		//border-bottom: 1px solid $blue;
-	}
-
-	.about-slider img {
-		
-		width: 100%; // force images to fill slider
-		height: auto;
 	}
 
 	.wwd-tabs {

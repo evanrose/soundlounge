@@ -51,10 +51,8 @@
         </div>
     </div>
 </footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <?php wp_footer(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/isotope.js"></script>
 
 </body>
 </html>

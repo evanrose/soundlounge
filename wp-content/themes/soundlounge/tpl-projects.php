@@ -32,10 +32,10 @@ $query = new WP_Query( $args );
 while ( $query->have_posts() ) : $query->the_post(); ?>
 
 		<?php 
-			$roles = wp_get_post_terms( $post->ID, 'role');
-			//var_dump( $positions );
-			$roles = wp_list_pluck( $roles, 'name' );
-			$awards = get_field( 'awards' );
+			$roles	= wp_get_post_terms( $post->ID, 'role');
+			$roles	= wp_list_pluck( $roles, 'name' );
+			$roles	= array_diff( $roles, array( 'Featured' ) );
+			$awards	= get_field( 'awards' );
 		 ?>
 
 		<div style="float: left;" class="small-12 medium-6 large-4 project-container" data-equalizer-watch>

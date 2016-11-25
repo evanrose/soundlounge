@@ -20,7 +20,7 @@ main {
 
 	&:hover {
 
-		color: #000;
+		color: black;
 	}
 
 	&.tiny {
@@ -52,15 +52,38 @@ main {
 
 //CONTACT
 
-.contact-email a {
+a .contact-email  {
 
 	color: black;
 	font-size: rem-calc(12);
 }
 
-.contact-page h3 {
+.contact-page {
 
-	margin-bottom: 10px;
+	h3 {
+
+		margin-bottom: 10px;
+	}
+
+
+	.alert-box {
+
+		background-color: $green;
+		border: none;
+		
+		h5 {
+
+			color: white;
+		}
+
+		a.close, a.close:hover {
+
+			color: white;
+			opacity: 1;
+		}
+	}
+
+
 }
 
 .contact-social {
@@ -110,17 +133,15 @@ main {
 	}
 }
 
-.google-maps {
-    
-    position: relative;
-    padding-bottom: 45%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-    float: none;
+// To fix chrome tab outtine
+dd > a.active{
+
+	border: none;
 }
 
-.google-maps iframe {
+iframe {
     
+    border: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -128,8 +149,69 @@ main {
     height: 100% !important;
 }
 
-// To fix chrome tab outtine
-dd > a.active{
+.google-maps {
+    
+    position: relative;
+    padding-bottom: 0; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    float: none;
 
-	border: none;
+    @media (min-width: 1024px) {
+
+		padding-bottom: 45%;
+	}
+
+    iframe {
+
+    	position: relative;
+
+    	@media (min-width: 1024px) {
+
+    		position: absolute;
+    	}
+    }
+
+}
+
+.video-wrapper {
+	
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+small.sharify-text {
+
+	line-height: 35px;
+	margin-right: 10px;
+	display: block;
+
+	@media (min-width: 768px) {
+		display: inline;
+	}	
+
+}
+
+.sharify-container {
+
+	display: inline;
+	padding: 0;
+
+
+	ul {
+
+		width: auto;
+
+		@media (min-width: 768px) {
+			float: right;
+		}
+		
+
+		li {
+			
+			width: 40px !important
+		}
+	}
 }

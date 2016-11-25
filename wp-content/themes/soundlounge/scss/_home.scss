@@ -1,5 +1,7 @@
 .page-home {
 
+	background-color: black;
+
 	.navigation {
 
 		display: none;
@@ -28,24 +30,16 @@
 
 	}
 
-	.image-container {
-
-		height: 200%;
-	    left: -55%;
-	    position: fixed;
-	    top: -50%;
-	    width: 200%;
-	}
-
 	@media (min-width: 1024px) { 
 
 		.image-container {
 
-			height: 150%;
-		    left: -30%;
+			display: block;
+			height: 140%;
+		    left: -25%;
 		    position: fixed;
-		    top: -25%;
-		    width: 150%;
+		    top: -20%;
+		    width: 140%;
 		}
 	}
 
@@ -53,11 +47,11 @@
 
 		.image-container {
 
-			height: 200%;
-		    left: -55%;
+			height: 110%;
+		    left: -7%;
 		    position: fixed;
-		    top: -25%;
-		    width: 200%;
+		    top: 0%;
+		    width: 110%;
 		}
 	}
 

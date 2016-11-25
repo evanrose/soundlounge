@@ -11,7 +11,6 @@
 <script>
 if (location.hash) {
   setTimeout(function() {
-
     window.scrollTo(0, 0);
   }, 1);
 }
@@ -26,7 +25,7 @@ if (location.hash) {
 		<nav class="top-bar" data-topbar role="navigation">
 		    <ul class="title-area"> 
 		        <li class="name"> 
-		            <h1><a href="/"><img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="Sound Lounge" title="Sound Lounge"></a></h1> 
+		            <h1><a href="/work/"><img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="Sound Lounge" title="Sound Lounge"></a></h1> 
 		        </li> 
 		         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		    </ul> 

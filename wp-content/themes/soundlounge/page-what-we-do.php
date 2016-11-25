@@ -6,7 +6,7 @@
 
 <div class="row small-12 wwd-tabs">
 	<div class="columns">
-		<form class="show-for-small-only">
+		<form class="hide-for-large-up">
 		
 	        <select class="dropdown" onChange="clickTab(this.value)">
 				<option value="tab-1">Commercials</option>
@@ -17,7 +17,7 @@
 			</select>
     	</form>
 		
-		<ul class="tabs show-for-medium-up" data-tab role="tablist" data-options="deep_linking: true; scroll_to_content: true">
+		<ul class="tabs show-for-large-up" data-tab role="tablist" data-options="deep_linking: true; scroll_to_content: true">
 
 
 			<?php 
@@ -240,6 +240,8 @@
 			$gallery_images = get_post_gallery_images( $slideshow_post ); 
 		?>
 
+		<!-- 
+
 		<div class="row">
 			<div class="small-12 about-slider columns">
 				<h2 class=""><?php echo $slideshow_title; ?></h2>
@@ -259,7 +261,7 @@
 
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 

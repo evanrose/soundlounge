@@ -40,9 +40,9 @@ input[type="submit"] {
     border-radius: 0;
     font-size: 10px;
     letter-spacing: 0.56em;
+    padding: 5px 0 0 10px;
     text-transform: uppercase;
     width: auto;
-
 
     &:hover {
 
@@ -80,7 +80,6 @@ input[type="submit"] {
 
     div {
 
-        //background-color: #ccc;
         border: none;
         left: 0;
         right: 0;
@@ -106,4 +105,9 @@ input[type="submit"] {
 .actions {
  
     text-align: center;
+}
+
+.span.wpcf7-not-valid-tip {
+
+    margin: -15px 0 10px 0;
 }
