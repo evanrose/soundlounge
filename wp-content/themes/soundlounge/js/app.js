@@ -2,14 +2,13 @@ jQuery(document).foundation();
 
 $(document).ready(function() {
  
+	initIsotope();
+
  	// Moves contact form success message
 	$( 'sidecar-page .alert-box h5' ).text( $( '.wpcf7-response-output' ).text() );
 	
 	// Change look of /contact/form button
 	$( '.hs-button' ).removeClass( 'large' ).addClass( 'button' );
-	
-	// Call the Isotope layout
-	initIsotope();
 
 });
 
@@ -39,6 +38,9 @@ function initIsotope() {
 	if ( $( '.js-tablet-landscape' ).css( 'position' ) == 'absolute' ) {
 
 		// Timeout is required because this fails ALL THE TIME
+
+		$( '.grid-item img' ).css( 'display', 'none' );
+
 		setTimeout( function() {
 
 			$( '.grid' ).isotope({
@@ -52,10 +54,16 @@ function initIsotope() {
 					rowHeight: '.grid-sizer'
 				}
 			});
+
+			
 		
 		}, 2000);
+
+		$( '.grid-item img' ).css( 'display', 'block' );
+
 	}
 }
+
 
 // Load items via Ajax
 function loadItems( slug, page ) {
@@ -80,3 +88,18 @@ if ( typeof window.page !== 'undefined' ) {
     
     loadItems( window.slug = '', window.page );
 }
+
+// Stats
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34157670-1']);
+_gaq.push(['_gat._forceSSL']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+})();

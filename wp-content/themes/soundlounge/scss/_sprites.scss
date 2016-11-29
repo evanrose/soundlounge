@@ -4,7 +4,7 @@
 .close-icon,
 .email-icon,
 .plus-icon,
- {
+{
 	background: url(../images/sprites.png) no-repeat;
 }
 
@@ -146,19 +146,11 @@
 .social-icon {	    
 
 	@include zoom(0.10);
-	/*@media (min-width: 768px) {
-    	@include zoom(0.20);
-    }
-    */
 }
 
 .social-icon {	    
 
 	@include zoom(0.10);
-	/*@media (min-width: 768px) {
-    	@include zoom(0.20);
-    }
-    */
 }
 
 .social {

@@ -54,39 +54,27 @@
 
 				<?php
 
-					$slug = 'sidecar';
+				$args = array(
+				    'post_type' => 'project',
+				    'posts_per_page' => -1,
+				    'tax_query' => array(
+				    	array(
+					        'taxonomy' => 'role',
+							'field'    => 'slug',
+							'terms'    => 'sidecar',
+						)
+				    )
+				);
 
-					$args = array(
-					    'post_type' => 'project',
-					    'posts_per_page' => -1,
-					);
+				$query = new WP_Query( $args );
 
-					if ( $slug ) {
-					    $args['tax_query'] = array(
-					    	array(
-						        'taxonomy' => 'role',
-								'field'    => 'slug',
-								'terms'    => $slug,
-							)
-					    );
-					}
-
-					$query = new WP_Query( $args );
-
-					while ( $query->have_posts() ) : $query->the_post(); ?>
-
-					<?php 
-						$roles = wp_get_post_terms( $post->ID, 'role');
-						//var_dump( $positions );
-						$roles = wp_list_pluck( $roles, 'name' );
-						$awards = get_field( 'awards' );
-					 ?>
+				while ( $query->have_posts() ) : $query->the_post(); ?>
 
 					<div style="float: left;" class="small-12 medium-6 large-4 project-container" data-equalizer-watch>
 						<a class="" href="//player.vimeo.com/video/<?php the_field( 'vimeo-id' ); ?>" data-lity="">
 							<div class="project-meta">
 								<h3><?php the_title(); ?></h3>
-								<h4><?php echo implode(' &#149; ', $roles); ?></h4>
+								<h4><?php //echo implode(' &#149; ', $roles); ?></h4>
 								<?php if ( $awards) { ?>
 									<h4><?php echo $awards; ?></h4>
 								<?php } ?>
@@ -110,19 +98,19 @@
 		<div class="small-12">
 			<div id="" class="row row-projects" data-equalizer data-options="equalize_on_stack: true">
 
-			<?php
+				<?php
+
 				$args = array(
 				    'post_type' => 'person',
 				    'posts_per_page' => -1,
+				    'tax_query' => array(
+				    	array(
+					        'taxonomy' => 'position',
+							'field'    => 'slug',
+							'terms'    => 'sidecar',
+						)
+				    )
 				);
-
-				$args['tax_query'] = array(
-			        array(
-			            'taxonomy' => 'position',
-						'field'    => 'slug',
-						'terms'    => 'sidecar',
-			        )
-			    );
 
 				$query = new WP_Query( $args );
 
@@ -189,4 +177,5 @@
 	
 </section>
 
-<?php endwhile; ?><?php get_footer(); ?>
+<?php endwhile; ?>
+<?php get_footer(); ?>

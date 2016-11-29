@@ -24,8 +24,6 @@
 		list-style: none;
 	}
 
-	.title-area a {}
-
 	.top-bar-section {
 
 		li {
@@ -37,20 +35,21 @@
 			padding-right: 20px;
 
 			@media (min-width: 769px) {
-				 	border-bottom: none;
-					padding-right: 0;
+				border-bottom: none;
+				padding-right: 0;
 			}
 
 			a {
-				 @media (min-width: 1024px) {
-				 	padding: 0 16px !important;
-				 }
+				@media (min-width: 1024px) {
+					padding: 0 16px !important;
+				}
 			}
 
 			&:hover {
 
 				font-style: italic;
 			}
+			
 			&.active {
 
 				font-style: italic;

@@ -39,6 +39,7 @@
 					</ul>
 				</div>
 				<div class="small-12 column">
+					
 					<?php 
 
 					if ( get_field( 'email_address' ) ) {
@@ -46,7 +47,7 @@
 						$email_text = '';
 					}
 					if ( in_array( 'Sound Designer', $positions ) ) { 
-						$email_address = 'producers@soundlounge.com';
+						$email_address = antispambot( 'producers@soundlounge.com' );
 						$email_text = 'For Scheduling: ';
 
 					}
@@ -56,7 +57,7 @@
 								<p><span class="icon-container">
 									<span class="icon social-icon email-icon email-icon-40"></span>
 								</span>
-								<span class="text text-40"><?php echo $email_text; ?><a class="email-address" href="mailto:<?php echo antispambot( $email_address ); ?>"><?php echo antispambot( $email_address ); ?></a></span></p>
+								<span class="text text-40"><?php echo $email_text; ?><a class="email-address" href="mailto:<?php echo $email_address; ?>"><?php echo $email_address ; ?></a></span></p>
 						</div>
 
 					<?php } ?>

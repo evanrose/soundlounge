@@ -16,8 +16,6 @@
 
 	<?php get_template_part( 'tpl', 'title' ); ?>
 
-
-
 	<div class="row social-row text-center">
 		<div class="small-11 small-centered large-offset-7 large-5 columns">
 			<ul class="small-block-grid-4">
@@ -31,23 +29,24 @@
 
 	<div class="row principals-row centered">
 		<div class="small-12 medium-6 large-4 columns">
-			<a class="email-address" href="mailto:mike@soundlounge.com">
+			<a class="email-address" href="mailto:<?php echo antispambot( 'mike@soundlounge.com' ); ?>">
 				<h3 class="contact-name">Mike Gullo</h3>
 				<h5 class="contact-title green">Executive Producer</h5>
-				<span class="contact-email">mike@soundlounge.com</a></span>
+				<span class="contact-email"><?php echo antispambot( 'mike@soundlounge.com' ); ?></a></span>
 			</a>
 		</div>
 			<div class="small-12 medium-6 large-4 columns">
-			<a class="email-address" href="mailto:robb@soundlounge.com">
+			<a class="email-address" href="mailto:<?php echo antispambot( 'robb@soundlounge.com' ); ?>">
 				<h3 class="contact-name">Rob Browning</h3>
 				<h5 class="contact-title pink">Executive Producer, Film &#149; Television</h5>
-				<span class="contact-email">robb@soundlounge.com</a></span>
+				<span class="contact-email"><?php echo antispambot( 'robb@soundlounge.com' ); ?></span>
+			</a>
 		</div>
 		<div class="small-12 medium-6 medium-centered large-4 large-uncentered columns">
-			<a class="email-address" href="mailto:carrie@soundlounge.com">
+			<a class="email-address" href="mailto:<?php echo antispambot( 'carrie@soundlounge.com' ); ?>">
 				<h3 class="contact-name">Carrie Faverty</h3>
 				<h5 class="contact-title purple">Casting Director</h5>
-				<span class="contact-email">carrie@soundlounge.com</span>
+				<span class="contact-email"><?php echo antispambot( 'carrie@soundlounge.com' ); ?></span>
 			</a>
 		</div>
 	</div>

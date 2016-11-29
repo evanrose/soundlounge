@@ -1,3 +1,23 @@
+<?php 
+
+$path = $_SERVER['REQUEST_URI'];
+$dir = explode( '/', $path );
+$dir = $dir[1];
+
+if ( $dir == 'staff' ) {
+
+	$new_dir = 'people';
+}
+
+if ( $dir == 'news' ) {
+
+	$new_dir = 'news';
+}
+
+if ( $new_dir ) wp_redirect( '/' . $new_dir . '/', 301 );
+
+?>
+
 <?php get_header(); ?>
 
 <section class="<?php echo $post->post_name; ?>-page">

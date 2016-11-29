@@ -49,6 +49,9 @@
 				</li>
 			</ul>
         </div>
+       <div class="small-12 column text-center">
+			<p>&copy; 2008-<?php echo date( 'Y' ); ?>. All rights reserved.</p>
+		</div>
     </div>
 </footer>
 

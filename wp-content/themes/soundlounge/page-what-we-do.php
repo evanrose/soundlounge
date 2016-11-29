@@ -21,6 +21,9 @@
 
 
 			<?php 
+
+				//This code is so nasty, I know. 
+
 				$i = 1;
 				while( $i <= 5 ) {
 
@@ -235,7 +238,6 @@
 
 		<?php 
 			$slideshow_post = get_field( 'slideshow' );
-			//var_dump($slideshow_post);
 			$slideshow_title = $slideshow_post->post_title;
 			$gallery_images = get_post_gallery_images( $slideshow_post ); 
 		?>

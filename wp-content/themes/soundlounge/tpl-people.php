@@ -1,4 +1,4 @@
-<div class="grid "><div class="grid-sizer"></div>
+<html><body><div class="grid "><div class="grid-sizer"></div>
 
 <?php
 
@@ -21,6 +21,8 @@ $query = new WP_Query( $args );
 
 while ( $query->have_posts() ) : $query->the_post();
 
+	$positions_clean = array();
+
 	$positions = wp_get_post_terms( $post->ID, 'position');
 	$positions = wp_list_pluck( $positions, 'name' );
 	$positions = array_diff( $positions, array( 'Sidecar' ) );
@@ -28,7 +30,7 @@ while ( $query->have_posts() ) : $query->the_post();
 		$positions_clean[] = str_replace( 'Sidecar', '+ Sidecar', $position );
 	}
 
-	if ( $slug == 'all' || contains( $slug, $positions )) {
+	if ( $slug == 'all' || contains( $slug, $positions ) ) {
 
 		$img_array 	= get_field( 'people_page_thumbnail' );
 		$w 			= $img_array['width'];
@@ -38,7 +40,7 @@ while ( $query->have_posts() ) : $query->the_post();
 		
 		?>
 
-		<div class="grid-item grid-item-<?php echo $orientation; ?>">
+		<div style="float: left;" class="grid-item grid-item-<?php echo $orientation; ?>">
 			<a href="<?php the_permalink(); ?>">							
 				<div class="image-container"><img alt="<?php the_title(); ?>" src="<?php echo $img_url; ?>"></div>
 				<div class="people-meta">
@@ -49,10 +51,9 @@ while ( $query->have_posts() ) : $query->the_post();
 		</div>
 	<?php } ?>
 
-	<?php
-		unset( $positions_clean );
-		wp_reset_postdata();
-	?>
+	<?php wp_reset_postdata(); ?>
 
 <?php endwhile; ?>	
 </div>
+</body>
+</html>

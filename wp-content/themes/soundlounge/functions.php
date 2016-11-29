@@ -4,6 +4,10 @@ add_theme_support( 'post-thumbnails' );
 register_nav_menus(); 
 show_admin_bar( 0 );
 
+if ( function_exists( 'lazyload_images_add_placeholders' ) ) {
+    $content = lazyload_images_add_placeholders( $content );
+}
+
 /**
 @ Enqueue Scripts and Styles
 */
@@ -60,28 +64,6 @@ function sl_nav_class ($classes, $item) {
 add_filter('nav_menu_css_class' , 'sl_nav_class' , 10 , 2);
 
 /**
-@ Add widget area for dropdown
-*/
-
-/* ??? */
-
-function sl_menu_item_classes( $classes, $item, $args ) {
-	if( 'header' !== $args->theme_location )
-		return $classes;
-	if( ( is_singular( 'post' ) || is_category() || is_tag() ) && 'Blog' == $item->title )
-		$classes[] = 'current-menu-item';
-		
-	if( ( is_singular( 'code' ) || is_tax( 'code-tag' ) ) && 'Code' == $item->title )
-		$classes[] = 'current-menu-item';
-		
-	if( is_singular( 'projects' ) && 'Case Studies' == $item->title )
-		$classes[] = 'current-menu-item';
-		
-	return array_unique( $classes );
-}
-add_filter( 'nav_menu_css_class', 'sl_menu_item_classes', 10, 3 );
-
-/**
 @ Add pagename to body class
 */
 
@@ -101,26 +83,25 @@ add_filter( 'body_class', 'sl_add_slug_body_class' );
 
 function check_orientation( $w, $h ) {
 
+	$o = 'square';
+
 	if ( $w > $h ) {
 		$o = 'horizontal';
 	}
-	elseif ( $w < $h ) {
+	if ( $w < $h ) {
 		$o = 'vertical';
 	}
-	else {
-		$o = 'square';
-	}
-
 	return $o;
 }
 
 /**
-@ Check if position is in array
+@ Check if text fragment of position is in the positions array
 */
 
-function contains( $str, array $arr )
-{
+function contains( $str, array $arr ) {
+    
     foreach( $arr as $a ) {
+        
         if ( stripos( $a, $str ) !== false ) return true;
     }
     return false;

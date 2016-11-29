@@ -1,18 +1,8 @@
 .what-we-do {
 
-	.slick-prev::before, .slick-next::before {
-
-		color: $blue;
-	}
-
 	.tabs-content h2, .about-slider h2 {
 
 		padding: 20px 0 40px;
-	}
-
-	section > .row {
-
-		//border-bottom: 1px solid $blue;
 	}
 
 	.wwd-tabs {
@@ -40,7 +30,7 @@
 					font-style: italic;
 				}
 			}
-			//text-align: center;
+
 			text-transform: uppercase;
 			width: 33%;	
 			@media (min-width: 1024px) { 
@@ -139,8 +129,4 @@
 			color: $green;
 		}
 	}	
-
-	
-
-
 }

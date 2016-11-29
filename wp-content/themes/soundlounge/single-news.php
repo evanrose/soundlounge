@@ -19,7 +19,6 @@
 				<?php the_post_thumbnail(); ?>
 			<?php } ?>
 
-
 		</div>
 		<div class="small-12 large-7 column">
 			<div class="row">
@@ -31,15 +30,12 @@
 						<?php } ?>
 						<p><?php the_content(); ?></p>
 					</div>
-
 				</div>
-
 
 				<div class="small-12 column medium-text-right" style="">
 					<small class="sharify-text">Share:</small> <?php echo do_shortcode( '[sharify]' ); ?> 
 				</div>
 			
-
 			</div>
 		</div>
 	</div>

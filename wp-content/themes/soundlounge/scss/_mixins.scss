@@ -1,6 +1,5 @@
 @mixin zoom($zoom) {
 
-	//zoom :$zoom;
     -moz-transform:scale($zoom, $zoom);
     -moz-transform-origin: 0 0;
     -ms-transform: scale($zoom);

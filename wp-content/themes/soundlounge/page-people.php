@@ -21,9 +21,8 @@
 	    </div>
 	</div>
 	<div class="row row-people">
-		<div id="people" class="small-12 columns">
-
-
+		<div id="people" class="small-12 columns text-center">
+			<img alt="loading" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/loading.gif">
 		</div>
 	</div>
 
