@@ -1,0 +1,157 @@
+body.page-sidecar {
+
+	main, main::after {
+
+		
+		border: none;
+	}
+
+	.lity {
+
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.navigation {
+
+		display: none;
+	}
+
+	section.sidecar-page {
+
+		//Sidecar Projects styles are controlled in _projects.scss
+
+		a {
+
+			color: $orange;
+
+			&:hover {
+
+				color: black;
+			}
+		}
+
+		.logo-row {
+
+			margin-top: 0;
+
+			@media (min-width: 768px) {
+				margin: 100px auto auto auto;
+			}
+		}
+
+		.row {
+
+			margin-bottom: 40px;
+
+			@media (min-width: 768px) {
+				margin-bottom: 100px;
+			}
+		}
+
+		.inline-list {
+
+			margin: 0;
+		}
+
+		.with-border {
+
+			border-bottom: 2px solid $orange;
+		}
+
+		.alert-box {
+
+			background-color: $orange;
+			border: none;
+			
+			h5 {
+
+				color: white;
+			}
+
+			a.close, a.close:hover {
+
+				color: white;
+				opacity: 1;
+			}
+		}
+
+		h2 {
+
+			margin-bottom: 40px;
+		}
+
+		li {
+
+			width: 25%;
+			height: 125px;
+			line-height: 125px;
+			border-top: 2px solid $orange;
+			border-bottom: 2px solid $orange;
+			text-align: center;
+			margin: 0;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			a {
+
+				color: black;
+
+				&:hover {
+
+					color: $orange;
+				}
+			}
+		}
+
+
+		.project-container {
+
+			& a:hover {
+
+				h3 {
+					color: $orange !important;
+				}
+
+			}
+		}
+
+
+		.map-meta-container {
+
+			position: relative;
+
+			.map-meta {
+
+				margin-top: 20px;
+				   
+				@media (min-width: 768px) {
+
+					margin-top: 0;
+					overflow: hidden;
+				    position: absolute;
+				    top: 50%;
+				}
+			}
+		}
+
+		.google-maps {
+
+			float: left;
+		}
+	}
+
+	footer {
+
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+

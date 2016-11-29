@@ -1,0 +1,54 @@
+/*
+
+Hey!
+
+Don't edit /wp-content/themes/soundlounge-2017/stylesheets/app.css. 
+Run the command in watch.sh and modify files in scss/.  
+You can add plain ol' CSS in scss/_custom.scss to change or override if you aren't comfortable with SASS.
+
+*/
+
+@import "colors";
+@import "mixins";
+@import "sprites";
+@import "settings";
+@import "foundation";
+@import "fonts";
+@import "nav";
+@import "forms";
+@import "home";
+@import "main";
+@import "people-news";
+@import "projects";
+@import "wwd";
+@import "footer";
+@import "sidecar";
+@import "custom";
+
+body, p {
+
+	font-family: Raleway-Medium, sans-serif;
+	letter-spacing: 0.04em;
+}
+
+a {
+
+	color: $green;
+}
+
+h1, h2, h3, h4, h5, h6 {
+		
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.row {
+
+	margin-bottom: 20px;
+
+	.navigation & {
+
+		margin-bottom: 0;
+	}
+}
