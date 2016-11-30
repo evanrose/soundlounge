@@ -41,7 +41,7 @@
 					}
 
 					$tab_index = $i-1;
-    				echo '<li class="tab-' . $i . ' tab-title ' . $active . '" role="presentation"><a href="#' . $tab_title_slug[0] . '" role="tab" tabindex="' . $tab_index . '" aria-selected="' . $selected . '" aria-controls="' . $tab_title_slug[0] . '">';
+    				echo '<li class="tab-' . $i . ' tab-title" role="presentation"><a href="#' . $tab_title_slug[0] . '" role="tab" tabindex="' . $tab_index . '" aria-selected="' . $selected . '" aria-controls="' . $tab_title_slug[0] . '">';
 					$field_name = 'tab_' . $i . '_title';
 					the_field( $field_name );
     				echo '</a></li>';

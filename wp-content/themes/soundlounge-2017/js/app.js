@@ -1,9 +1,16 @@
+// Prevent jump to anchor
+if (location.hash) {
+	setTimeout(function() {
+		window.scrollTo(0, 0);
+	}, 1);
+}
+
 jQuery(document).foundation();
 
 $(document).ready(function() {
 
  	// Moves contact form success message
-	$( 'sidecar-page .alert-box h5' ).text( $( '.wpcf7-response-output' ).text() );
+	$( '.sidecar-page .alert-box h5' ).text( $( '.wpcf7-response-output' ).text() );
 	
 	// Change look of /contact/form button
 	$( '.hs-button' ).removeClass( 'large' ).addClass( 'button' );

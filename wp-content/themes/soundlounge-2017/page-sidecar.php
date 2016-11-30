@@ -4,7 +4,7 @@
 
 <section class="sidecar-page">
 
-	<?php if ( $_POST['_wpcf7'] ) { ?>
+	<?php if ( isset( $_POST['_wpcf7'] ) ) { ?>
 
 		<div class="row">
 			<div class="small-12 column">
@@ -78,7 +78,7 @@
 							<div class="project-meta">
 								<h3><?php the_title(); ?></h3>
 								<h4><?php //echo implode(' &#149; ', $roles); ?></h4>
-								<?php if ( $awards) { ?>
+								<?php if ( isset( $awards ) ) { ?>
 									<h4><?php echo $awards; ?></h4>
 								<?php } ?>
 							</div>

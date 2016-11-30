@@ -2,7 +2,7 @@
 
 	$path = $_SERVER['REQUEST_URI'];
 	$dir = explode( '/', $path );
-	$dir = $dir[1];
+	echo $dir = $dir[1];
 
 	if ( $dir == 'staff' ) {
 
@@ -12,10 +12,13 @@
 	if ( $dir == 'news' ) {
 
 		$new_dir = 'news';
+		echo 'asdf';
 	}
 
-	if ( $new_dir ) wp_redirect( '/' . $new_dir . '/', 301 );
+	if ( isset( $new_dir ) ) {
 
+		wp_redirect( '/' . $new_dir . '/', 301 );
+	}
 ?>
 
 <?php get_header(); ?>

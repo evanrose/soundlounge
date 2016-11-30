@@ -4,7 +4,7 @@
 
 <section class="contact-page">
 
-	<?php if ( $_GET['submissionGuid'] ) { ?>
+	<?php if ( isset( $_GET['submissionGuid'] ) ) { ?>
 
 		<div class="row">
 			<div class="small-12 column">
