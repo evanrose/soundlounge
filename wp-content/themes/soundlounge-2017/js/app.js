@@ -55,7 +55,7 @@ function initIsotope() {
 		$( '.loading' ).css( 'display', 'none' );
 		$( '.grid-item' ).css( 'visibility', 'visible' );
 
-	}, 2000);
+	}, 2250);
 }
 
 
