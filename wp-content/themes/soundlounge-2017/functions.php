@@ -44,9 +44,24 @@ function sl_nav_menu() {
 }
 
 /**
+@ Function Footer Menu
+*/
+function sl_footer_menu() {
+
+	$args = array();
+	$args = array( 
+		'menu' 		=> 'Footer Menu', 
+		'menu_class' => '', 
+		'menu_id' 	=> '',
+		'container' => '',
+    );
+	return $nav_menu = wp_nav_menu( $args );
+}
+
+/**
 @ Filter "active" to current nav item
 */
-function sl_nav_class ($classes, $item) {
+function sl_nav_class( $classes, $item ) {
 
 	if ( is_singular( 'project' ) && 'Work' == $item->title ) {
 		$classes[] = 'current-menu-item';

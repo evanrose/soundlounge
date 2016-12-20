@@ -7,8 +7,18 @@ footer {
 		margin-bottom: 20px;
 	}
 
-	.social-row > div {
+	ul {
 
-		height: 80px;
+		margin-left: 0 !important;
+
+		li {
+
+			list-style: none;
+		}
+	}
+
+	.horiz-social-row {
+
+		margin: 40px 0 40px;
 	}
 }

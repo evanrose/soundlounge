@@ -66,6 +66,10 @@
 
 		.project-meta {
 
+			backface-visibility: hidden;
+   			-webkit-backface-visibility: hidden;
+   			transform: translateZ(0) scale(1.0, 1.0) translateX(20px) translateY(-25%);
+
 			z-index: 2;
 			overflow: hidden;
 			position: absolute;

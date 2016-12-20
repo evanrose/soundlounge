@@ -1,15 +1,16 @@
 <?php
 	$time = 1;
-	//$time = 86400 * 14
+	$time = 86400 * 7;
 	setcookie( 'bypass_home', 'true', time() + ( $time ), '/');
 	if ( isset( $_COOKIE['bypass_home'] ) ) {
-		wp_redirect( '/work/' );
-		exit;
+		//wp_redirect( '/work/' );
+		//exit;
 	}
 ?>
 
 <script type="text/javascript">
-	if ( window.innerWidth > 1000 ) {
+	if ( window.innerWidth < 1000 ) {
+		//alert('less!');
 		//window.location.replace( '/work/' );
 	}
 </script>
@@ -17,6 +18,8 @@
 <?php get_header(); ?>
 
 <?php setup_postdata( $post ); ?>
+
+<span class="show"
 
 <section class="home-page">
 

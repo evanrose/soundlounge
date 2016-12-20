@@ -28,7 +28,7 @@
 	overflow: hidden;
 }
 
-.news-social-row {
+.horiz-social-row {
 
 	height: 35px;
 	overflow: hidden;
@@ -36,6 +36,11 @@
 	li {
 
 		padding-left: 25px;
+	}
+
+	.social-icon {
+
+		margin-left: 15px;
 	}
 }
 

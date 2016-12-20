@@ -7,7 +7,7 @@
 	<?php endwhile; ?>
 
 	<div class="row">
-	    <div class="small-12 news-social-row medium-4 medium-centered columns">
+	    <div class="small-12 horiz-social-row medium-4 medium-centered columns">
 			<ul class="small-block-grid-4">
 				<li><a href="https://www.facebook.com/SoundLoungeNY/" target="_blank"><span class="icon social-icon social-facebook"></span></a></li>
 				<li><a href="https://twitter.com/soundloungeny" target="_blank"><span class="icon social-icon social-twitter"></span></a></li>
