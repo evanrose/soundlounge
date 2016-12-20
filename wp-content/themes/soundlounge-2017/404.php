@@ -2,7 +2,7 @@
 
 	$path = $_SERVER['REQUEST_URI'];
 	$dir = explode( '/', $path );
-	echo $dir = $dir[1];
+	$dir = $dir[1];
 
 	if ( $dir == 'staff' ) {
 
@@ -12,7 +12,6 @@
 	if ( $dir == 'news' ) {
 
 		$new_dir = 'news';
-		echo 'asdf';
 	}
 
 	if ( isset( $new_dir ) ) {

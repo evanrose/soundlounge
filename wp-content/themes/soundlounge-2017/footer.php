@@ -35,24 +35,6 @@
 	            		<li><a href="/what-we-do/#Remote">Remote Services</a></li>
 	            	</ul>
 	            </li>
-	            <!-- <li>
-	            	<div class="row collapse social-row">
-						<div class="small-6 columns">
-							<a href="https://www.facebook.com/SoundLoungeNY/" target="_blank"><span class="icon social-icon social-facebook"></span></a>
-						</div>
-						<div class="small-6 columns">
-							<a href="https://twitter.com/soundloungeny" target="_blank"><span class="icon social-icon social-twitter"></span></a>
-						</div>
-					</div>
-					<div class="row collapse social-row">
-						<div class="small-6 columns">
-							<a href="https://www.instagram.com/soundloungeny/" target="_blank"><span class="icon social-icon social-instagram"></span></a>
-						</div>
-						<div class="small-6 columns">
-							<a href="https://www.linkedin.com/company/sound-lounge" target="_blank"><span class="icon social-icon social-linkedin"></span></a>
-						</div>
-					</div>
-				</li> -->
 			</ul>
         </div>
 

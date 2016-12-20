@@ -7,6 +7,21 @@ register_nav_menus();
 show_admin_bar( 0 );
 
 /**
+@ Ttile Tag
+*/
+function sl_title_tag(){
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'sl_title_tag' );
+
+function sl_document_title_separator( $sep ) {
+
+    $sep = ' | ';
+	return $sep;
+}
+add_filter( 'document_title_separator', 'sl_document_title_separator' );
+
+/**
 @ Enqueue Scripts and Styles
 */
 function sl_enqueue_scripts() {

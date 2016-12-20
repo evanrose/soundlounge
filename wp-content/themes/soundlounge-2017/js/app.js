@@ -5,7 +5,18 @@ if (location.hash) {
 	}, 1);
 }
 
-jQuery(document).foundation();
+// Trigger a window resize event on tab click so that Orbit slideshows load in tabs that are initially hidden
+$(document).foundation({
+
+	tab: {
+		callback : function (tab) {
+
+			var evt = document.createEvent( 'UIEvents' ); 
+			evt.initUIEvent( 'resize', true, false, window, 0 ); 
+			window.dispatchEvent( evt );
+		}
+	}
+});
 
 $(document).ready(function() {
 
@@ -22,19 +33,6 @@ function clickTab( tab ) {
 
 	$( '.' + tab + ' a' )[0].click();
 }
-
-// Trigger a window resize event on tab click so that Orbit slideshows load in tabs that are initially hidden
-$(document).foundation({
-
-	tab: {
-		callback : function (tab) {
-
-			var evt = document.createEvent( 'UIEvents' ); 
-			evt.initUIEvent( 'resize', true, false, window, 0 ); 
-			window.dispatchEvent( evt );
-		}
-	}
-});
 
 // Load Isotope layout
 

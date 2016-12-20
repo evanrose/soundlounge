@@ -1,6 +1,4 @@
-.page-home {
-
-	background-color: black;
+.page-home { 
 
 	.navigation {
 
@@ -9,84 +7,19 @@
 
 	main {
 
-		border: none;
-		margin: 0;		
-		padding: 0;
-		position: relative;
-		z-index: 1;
-		height: 100%;
-		width: 100%;
-
-		&::before, &::after {
-
-			border: none;
-			position: relative !important;
-		}
+		padding-top: 0;
 	}
 
 	section {
 
-		margin: 0;
+		border-top: 2px solid $green;
+		margin-top: 40px;
+		padding-top: 40px;
 	}
-
-	img {
-
-		position:absolute;
-		top: 0;
-		left: 0;
-		right:0;
-		bottom: 0;
-		margin: auto;
-		z-index: 2;
-	}
-
 
 	.image-container {
 
-
-	    
-	}
-
-	@media (min-width: 1024px) { 
-
-		.image-container {
-
-			display: block;
-			height: 140%;
-		    left: -24%;
-		    position: fixed;
-		    top: -22%;
-		    width: 140%;
-		    
-		}
-	}
-
-	@media (min-width: 1152px) { 
-
-		.image-container {
-
-			display: block;
-			height: 120%;
-		    left: -12%;
-		    position: fixed;
-		    top: -11%;
-		    width: 120%;
-		    
-		}
-	}
-
-	@media (min-width: 1280px) { 
-
-		
-
-		.image-container {
-
-			height: 100%;
-		    left: 0;
-		    position: fixed;
-		    top: 0%;
-		    width: 100%;
-		}
+		position: relative;
 	}
 
 	.button {
@@ -102,8 +35,4 @@
 		z-index: 3;
 	}
 
-	footer {
-
-		display: none;
-	}
-}
+}	

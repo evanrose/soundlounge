@@ -10323,76 +10323,25 @@ input[type="submit"]:hover {
   margin: -15px 0 10px 0;
 }
 
-/* line 1, ../scss/_home.scss */
-.page-home {
-  background-color: black;
-}
-/* line 5, ../scss/_home.scss */
+/* line 3, ../scss/_home.scss */
 .page-home .navigation {
   display: none;
 }
-/* line 10, ../scss/_home.scss */
+/* line 8, ../scss/_home.scss */
 .page-home main {
-  border: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
+  padding-top: 0;
+}
+/* line 13, ../scss/_home.scss */
+.page-home section {
+  border-top: 2px solid #73c640;
+  margin-top: 40px;
+  padding-top: 40px;
 }
 /* line 20, ../scss/_home.scss */
-.page-home main::before, .page-home main::after {
-  border: none;
-  position: relative !important;
+.page-home .image-container {
+  position: relative;
 }
-/* line 27, ../scss/_home.scss */
-.page-home section {
-  margin: 0;
-}
-/* line 32, ../scss/_home.scss */
-.page-home img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 2;
-}
-@media (min-width: 1024px) {
-  /* line 52, ../scss/_home.scss */
-  .page-home .image-container {
-    display: block;
-    height: 140%;
-    left: -24%;
-    position: fixed;
-    top: -22%;
-    width: 140%;
-  }
-}
-@media (min-width: 1152px) {
-  /* line 66, ../scss/_home.scss */
-  .page-home .image-container {
-    display: block;
-    height: 120%;
-    left: -12%;
-    position: fixed;
-    top: -11%;
-    width: 120%;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 82, ../scss/_home.scss */
-  .page-home .image-container {
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-  }
-}
-/* line 92, ../scss/_home.scss */
+/* line 25, ../scss/_home.scss */
 .page-home .button {
   bottom: 20%;
   display: block;
@@ -10403,10 +10352,6 @@ input[type="submit"]:hover {
   right: 0;
   width: 180px;
   z-index: 3;
-}
-/* line 105, ../scss/_home.scss */
-.page-home footer {
-  display: none;
 }
 
 /* line 1, ../scss/_main.scss */
@@ -10945,17 +10890,18 @@ footer {
 }
 /* line 5, ../scss/_footer.scss */
 footer h6 {
+  font-size: 1em;
   margin-bottom: 20px;
 }
-/* line 10, ../scss/_footer.scss */
+/* line 11, ../scss/_footer.scss */
 footer ul {
   margin-left: 0 !important;
 }
-/* line 14, ../scss/_footer.scss */
+/* line 15, ../scss/_footer.scss */
 footer ul li {
   list-style: none;
 }
-/* line 20, ../scss/_footer.scss */
+/* line 21, ../scss/_footer.scss */
 footer .horiz-social-row {
   margin: 40px 0 40px;
 }
