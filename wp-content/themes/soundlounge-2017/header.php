@@ -6,7 +6,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Sound Lounge, NYC based Audio Post Production Company that provides creative audio post production services for TV and Radio commercials, films, and TV series">
+<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 <meta name="keywords" content="Audio Post Production Company NYC, Sound Lounge, New York, Premier. Audio, Post, Production, Facility">
 <?php wp_head(); ?>
 </head>

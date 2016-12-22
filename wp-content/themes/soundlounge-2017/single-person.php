@@ -47,17 +47,28 @@
 						$email_text = '';
 					}
 					if ( in_array( 'Sound Designer', $positions ) ) { 
-						$email_address = antispambot( 'producers@soundlounge.com' );
+						$email_address = 'producers@soundlounge.com';
 						$email_text = 'For Scheduling: ';
 
 					}
+
+					//hiding the email for now
+
+					//$email_address = 0;
+
 					if ( $email_address ) { ?>
 
 						<div class="email-icon-container">
-								<p><span class="icon-container">
-									<span class="icon social-icon email-icon email-icon-40"></span>
+								<p>
+									<span class="icon-container">
+										<span class="icon social-icon email-icon email-icon-40">
+									</span>
 								</span>
-								<span class="text text-40"><?php echo $email_text; ?><a class="email-address" href="mailto:<?php echo $email_address; ?>"><?php echo $email_address ; ?></a></span></p>
+								<span class="text text-40"><?php echo $email_text; ?>
+									<?php //<a class="email-address" href="mailto:<?php echo $email_address; ?>
+										<?php echo antispambot( $email_address ); ?>
+									<?php //</a> ?>
+								</span></p>
 						</div>
 
 					<?php } ?>

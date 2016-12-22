@@ -1,7 +1,6 @@
 -sftp-config.json
-sl
-wp-content/themes/wp-boilerplate/
-wp-content/themes/.DS_Store
-sftp-config.json
 .DS_Store
+sftp-config.json
 wp-config.php
+.sass-cache
+uploads
