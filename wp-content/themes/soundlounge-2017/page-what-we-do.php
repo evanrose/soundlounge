@@ -9,6 +9,7 @@
 		<form class="hide-for-large-up">
 		
 	        <select class="dropdown" onChange="clickTab(this.value)">
+	        	<option value="">Services</option>
 				<option value="tab-1">Commercials</option>
 				<option value="tab-2">Casting</option>
 				<option value="tab-3">Film TV ADR</option>
@@ -238,32 +239,33 @@
 
 		<?php 
 			$slideshow_post = get_field( 'slideshow' );
-			$slideshow_title = $slideshow_post->post_title;
-			$gallery_images = get_post_gallery_images( $slideshow_post ); 
-		?>
 
-		<!-- 
+			if ( $slideshow_post ) {
+				$slideshow_title = $slideshow_post->post_title;
+				$gallery_images = get_post_gallery_images( $slideshow_post ); 
+				?>
 
-		<div class="row">
-			<div class="small-12 about-slider columns">
-				<h2 class=""><?php echo $slideshow_title; ?></h2>
-				<ul class="about-slider orbit" data-orbit data-options="animation:slide;
-					pause_on_hover:true;
-					animation_speed:500;
-					navigation_arrows:true;
-					bullets:false;
-					timer:false;
-					slide_number:false;">
+			<div class="row">
+				<div class="small-12 about-slider columns">
+					<h2 class=""><?php echo $slideshow_title; ?></h2>
+					<ul class="about-slider orbit" data-orbit data-options="animation:slide;
+						pause_on_hover:true;
+						animation_speed:500;
+						navigation_arrows:true;
+						bullets:false;
+						timer:false;
+						slide_number:false;">
 
-					<?php 
-						foreach( $gallery_images as $img_src ) {
-							echo '<li><img alt="" src="' . $img_src . '"></li>';
-						}
-					?>
+						<?php 
+							foreach( $gallery_images as $img_src ) {
+								echo '<li><img alt="" src="' . $img_src . '"></li>';
+							}
+						?>
 
-				</ul>
+					</ul>
+				</div>
 			</div>
-		</div> -->
+		<?php } ?>
 	</div>
 </div>
 

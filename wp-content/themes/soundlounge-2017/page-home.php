@@ -1,17 +1,16 @@
 <?php
 	$time = 1;
-	$time = 86400 * 7;
+	$time = 86400;
 	setcookie( 'bypass_home', 'true', time() + ( $time ), '/' );
 	if ( isset( $_COOKIE['bypass_home'] ) ) {
-		//wp_redirect( '/work/' );
-		//exit;
+		wp_redirect( '/work/' );
+		exit;
 	}
 ?>
 
 <script type="text/javascript">
 	if ( window.innerWidth < 1000 ) {
-		//alert('less!');
-		//window.location.replace( '/work/' );
+		window.location.replace( '/work/' );
 	}
 </script>
 

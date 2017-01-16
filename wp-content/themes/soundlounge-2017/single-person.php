@@ -3,6 +3,7 @@
 <?php 
 	$positions = wp_get_post_terms( $post->ID, 'position');
 	$positions = wp_list_pluck( $positions, 'name' );
+	$positions = array_diff( $positions, array( 'Sidecar' ) );
  ?>
 
 <section class="person-page">
